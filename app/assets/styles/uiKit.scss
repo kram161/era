@@ -20,6 +20,8 @@
   flex-direction: column;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  background: #fff;
   &__first-block{
     display: flex;
     justify-content: center;
@@ -112,7 +114,7 @@
   }
   &__second-block{
     ul{
-      margin: 27px 0 0 0;
+      margin: 22px 0 0 0;
       padding: 0;
       display: flex;
       flex-direction: row;
@@ -120,7 +122,7 @@
       li{
         a{
           text-decoration: none;
-          color:#000;
+          color:#5C5C5C;
           display: inline-block;
           position: relative;
           font-size: 1.6rem;
@@ -141,9 +143,97 @@
           background: #000;
           transition: all 1s;
         }
-        a:hover:after {
+      }
+      .active-category{
+        a{
+          color:#000;
+        }
+        a:after{
           width: 100%;
         }
+      }
+    }
+  }
+}
+.uiKit{
+  padding:140px 0 0 0;
+  z-index: 2;
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  .main__page__picture{
+    a:nth-child(1){
+      max-width: 460px;
+      max-height: 797px;
+      display: block;
+      position: relative;
+      img{
+        max-width: 460px;
+        max-height: 797px;
+        object-fit: contain;
+        transition:0.5s ease;
+      }
+      .main__page__picture__hidden-info{
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        right: 25px;
+        top:25px;
+        svg{
+          opacity: 0;
+          transition:0.5s ease;
+        }
+        svg:nth-child(1){
+          margin-top:0;
+        }
+        svg:not(:first-child){
+          margin:25px 0;
+        }
+        svg:nth-child(2){
+          margin-top:auto;
+          margin-bottom:0;
+        }
+        svg:last-child{
+          margin: 0 0 50px 0;
+        }
+      }
+    }
+    a:nth-child(2){
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      p{
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding:14px 0 0 0;
+        margin:0;
+      }
+      svg{
+        opacity: 1;
+        transition:0.5s ease;
+      }
+    }
+  }
+  .main__page__picture:hover{
+    a:nth-child(1){
+      img{
+        transition:0.5s ease;
+        filter: brightness(60%);
+      }
+      .main__page__picture__hidden-info{
+        svg{
+          opacity: 1;
+          transition:0.5s ease;
+        }
+      }
+    }
+    a:nth-child(2){
+      svg{
+        opacity: 1;
+        transition:0.5s ease;
       }
     }
   }
