@@ -12650,3 +12650,97 @@ textarea.form-control-lg {
 .personal-area__profile__description__icons svg {
   margin: 0 0 0 40px;
 }
+.personal-area__menu {
+  margin: 88px 0 0 0;
+}
+.personal-area__menu ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.personal-area__menu ul li a {
+  text-decoration: none;
+  color: #5C5C5C;
+  display: inline-block;
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding: 0 0 5px 0;
+  margin: 0 40px 0 0;
+}
+.personal-area__menu ul li a:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.personal-area__galery, .personal-area__collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0 0 0;
+}
+.personal-area__galery__unit, .personal-area__collection__unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.personal-area__galery__unit a, .personal-area__collection__unit a {
+  display: block;
+  height: 460px;
+  width: 460px;
+}
+.personal-area__galery__unit a img, .personal-area__collection__unit a img {
+  height: 460px;
+  width: 460px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.personal-area__galery__unit__description, .personal-area__collection__unit__description {
+  margin: 14px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.personal-area__galery__unit__description p, .personal-area__collection__unit__description p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.personal-area__galery__unit__description__stats, .personal-area__collection__unit__description__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.personal-area__galery__unit__description__stats__views, .personal-area__galery__unit__description__stats__likes, .personal-area__collection__unit__description__stats__views, .personal-area__collection__unit__description__stats__likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.personal-area__galery__unit__description__stats__views p, .personal-area__galery__unit__description__stats__likes p, .personal-area__collection__unit__description__stats__views p, .personal-area__collection__unit__description__stats__likes p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: auto 0;
+}
+.personal-area__galery__unit__description__stats__views svg, .personal-area__galery__unit__description__stats__likes svg, .personal-area__collection__unit__description__stats__views svg, .personal-area__collection__unit__description__stats__likes svg {
+  margin: auto 5px auto 30px;
+}
