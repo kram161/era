@@ -15,7 +15,7 @@ module.exports = function script() {
 		.pipe(eslint.format())
 		.pipe(
 			webpack({
-				mode: 'production',
+				mode: 'development',
 				output: {
 					filename: 'main.min.js',
 				},

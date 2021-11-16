@@ -5,6 +5,9 @@
 :root{
   font-size: 10px;
 }
+.main{
+  padding: 140px 0 0 0;
+}
 .personal-area{
   padding: 140px 0 0 0;
   &__profile{
@@ -140,16 +143,84 @@
     }
   }
 }
-.main{
+.personal-area__settings{
+  display: flex;
+  justify-content: space-between;
   padding: 140px 0 0 0;
-  &__page{
-    column-count: 3;
-    column-gap: 10px;
-    &__picture{
-      margin: 0 0 30px 0;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      break-inside: avoid;
+  img{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+  }
+  &__area{
+    display: flex;
+    flex-direction: column;
+    margin:0 100px;
+    flex:1;
+    h2{
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0 0 22px 0;
+    }
+    &__profile{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      &__personal-information{
+        padding: 0 0 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div{
+          width: 50%;
+          margin:0 0 25px 0;
+          p{
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 0 0 0 10px;
+          }
+          input{
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 12px 10px;
+            border:1px solid #5C5C5C;
+            width: 90%;
+          }
+          input::placeholder{
+            color:#000;
+          }
+        }
+        div:nth-child(3){
+          width: 50%;
+        }
+        div:nth-child(4){
+          width: 100%;
+          position: relative;
+          textarea{
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 12px 10px;
+            border:1px solid #5C5C5C;
+            width: 100%;
+            height: 80px;
+            resize: none;
+            box-sizing: border-box;
+          }
+          textarea::placeholder{
+            color:#000;
+          }
+          div{
+            position: relative;
+            
+            width: 30px;
+            p{
+              font-weight: 300;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
     }
   }
 }
+

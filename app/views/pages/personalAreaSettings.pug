@@ -1,0 +1,67 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+block content
+    include ../includes/modules/menu
+
+    .container
+        .personal-area__settings
+            a(href="#")
+                img(src='assets/img/testImg2.png')
+            .personal-area__settings__area
+                .personal-area__settings__area__profile
+                    h2 Настройки профиля
+                    .personal-area__settings__area__profile__personal-information
+                        div
+                            p Имя
+                            input(
+                                type='text'
+                                placeholder='Динозавр'
+                            )
+                        div
+                            p Фамилия
+                            input(
+                                type='text'
+                                placeholder='Никита'
+                            )
+                        div
+                            p Короткое имя
+                            input(
+                                type='text'
+                                placeholder='@'
+                            )
+                        div
+                            p Описание профиля
+                            textarea#ta(
+                                placeholder='Самая топовая вайфу твоего района'
+                                maxlength='300'
+                            )
+                            div
+                                span#taNumber 0
+                                span /300
+                .personal-area__settings__area__account
+                    h2 Настройки аккаунта
+            .personal-area__settings__menu
+                ul
+                    li
+                        a(href='#') Настройки профиля
+                    li
+                        a(href='#') Настройки аккаунта
+                    li
+                        a(href='#') Настройки ленты
+                    li
+                        a(href='#') Подтвердить аккаунт
+                    li
+                        a(href='#') Разрешения
+                    li
+                        a(href='#') Конфиденциальность
+                    li
+                        a(href='#') Безоапсность
+                a(href='#') Сохранить изменения
+
+
+
+block scripts
+    script(src="assets/scripts/main.min.js")
