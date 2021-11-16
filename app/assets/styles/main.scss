@@ -140,3 +140,16 @@
     }
   }
 }
+.main{
+  padding: 140px 0 0 0;
+  &__page{
+    column-count: 3;
+    column-gap: 10px;
+    &__picture{
+      margin: 0 0 30px 0;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      break-inside: avoid;
+    }
+  }
+}
