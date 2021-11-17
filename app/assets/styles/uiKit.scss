@@ -457,6 +457,115 @@
     }
   }
 }
+.create-collection{
+  position: absolute;
+  width: 98%;
+  height: 540px;
+  padding: 0 72px;
+  margin:0 -50% 0 0 ;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: #fff;
+  h2{
+    margin:52px 0 0 0;
+    font-weight: 700;
+    font-size: 3.2rem;
+  }
+  &__block{
+    display: flex;
+    justify-content: flex-start;
+    margin: 21px 120px 0 120px;
+    &__input-file{
+      margin: 18px 0 0 0;
+      p{
+        font-size:1.6rem;
+        font-weight:400;
+        color:#575757;
+        margin:10px 0;
+      }
+      input{
+        display: none;
+      }
+      label{
+        border: 1px solid #BDBDBD;
+        width: 240px;
+        height: 240px;
+        display: inline-block;
+        position: relative;
+        p{
+          position: absolute;
+          width: 143px;
+          font-size: 1.6rem;
+          font-weight: 400;
+          text-align: center;
+          margin: 0;
+          top:calc(50% - 24px);
+          left:calc(50% - 72px);
+        }
+      }
+    }
+    &__inputs{
+      width: 100%;
+      margin:0 0 0 120px;
+      .simple-input{
+        width: 100%;
+      }
+      .inputs-radio{
+        margin:0;
+        input{
+          margin:2px 0 auto 0;
+        }
+        label{
+          display: flex;
+          flex-direction: column;
+          span{
+            font-weight: 400;
+            font-size: 1.4rem;
+            color:#5C5C5C;
+          }
+        }
+      }
+      &__buttons{
+        display: flex;
+        justify-content: flex-end;
+        a{
+          border: 2px solid #000;
+          background: none;
+          color:#000;
+          font-size: 1.4rem;
+          font-weight: 400;
+          padding: 13px 0;
+          text-decoration: none;
+          transition: 0.5s ease;
+          display: block;
+          width: 100px;
+          text-align: center;
+          margin:0 0 0 20px;
+        }
+        a:hover{
+          background: #000;
+          color:#fff;
+          transition: 0.5s ease;
+        }
+        a:nth-child(2){
+          background: #000;
+          color:#fff;
+        }
+        a:hover:nth-child(2){
+          background: none;
+          color:#000;
+        }
+      }
+    }
+  }
+  &__button{
+    position: absolute;
+    right: 72px;
+    top:24px;
+  }
+}
 .picture__page{
   column-count: 3;
   column-gap: 10px;
