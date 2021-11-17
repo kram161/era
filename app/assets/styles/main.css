@@ -13066,3 +13066,99 @@ textarea.form-control-lg {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
+
+.cart {
+  padding: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cart__contents {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cart__contents h2, .cart__contents .h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 20px 0 0 0;
+}
+.cart__contents__unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 36px 0 0 0;
+}
+.cart__contents__unit a {
+  display: block;
+}
+.cart__contents__unit a img {
+  width: 240px;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cart__contents__unit__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.cart__contents__unit__description h3, .cart__contents__unit__description .h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.cart__contents__unit__description h4, .cart__contents__unit__description .h4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.cart__contents__unit__description__license {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cart__contents__unit__description__license span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: auto 15px auto 0;
+}
+.cart__contents__unit__description__license svg {
+  margin: auto 0;
+}
+.cart__contents__unit__description p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+}
+.cart__contents__unit__description a {
+  width: 40px;
+  height: 40px;
+  margin: 25px 0 0 0;
+}
+.cart__contents__unit__price p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 13px 44px;
+  border: 1px solid #000;
+  cursor: default;
+}
