@@ -14,25 +14,25 @@ block content
                 .personal-area__settings__area__profile
                     h2 Настройки профиля
                     .personal-area__settings__area__profile__personal-information
-                        div
+                        .personal-area__settings__area__profile__personal-information__input-simple
                             p Имя
                             input(
                                 type='text'
                                 placeholder='Динозавр'
                             )
-                        div
+                        .personal-area__settings__area__profile__personal-information__input-simple
                             p Фамилия
                             input(
                                 type='text'
                                 placeholder='Никита'
                             )
-                        div
+                        .personal-area__settings__area__profile__personal-information__input-simple
                             p Короткое имя
                             input(
                                 type='text'
                                 placeholder='@'
                             )
-                        div
+                        .personal-area__settings__area__profile__personal-information__text-area
                             p Описание профиля
                             textarea#ta(
                                 placeholder='Самая топовая вайфу твоего района'
@@ -41,8 +41,94 @@ block content
                             div
                                 span#taNumber 0
                                 span /300
+                        .personal-area__settings__area__profile__personal-information__input-simple
+                            p Ваше место проживания
+                            input(
+                                type='text'
+                                placeholder='Москва'
+                            )
+
+                        .personal-area__settings__area__profile__personal-information__interests
+                            p Интересы
+                            input#interestsTa(
+                                type='text'
+                            )
+
+
+                        .personal-area__settings__area__profile__personal-information__input-simple
+                            p Instagram
+                            input(
+                                type='text'
+                                placeholder='@'
+                            )
+                        .personal-area__settings__area__profile__personal-information__input-simple
+                            p VK
+                            input(
+                                type='text'
+                                placeholder='https: //'
+                            )
                 .personal-area__settings__area__account
                     h2 Настройки аккаунта
+                    .personal-area__settings__area__account__personal-information
+                        .personal-area__settings__area__account__personal-information__input-simple.simple-input
+                            .simple-input
+                                p Электронная почта
+                                input(
+                                    type='email'
+                                    placeholder='Nikitadinosaur@gmail.com'
+                                )
+                        .personal-area__settings__area__account__personal-information__input-simple
+                            .simple-input
+                                p Логин
+                                input(
+                                    type='text'
+                                )
+                            .input-button
+                                a(href='#') Изменить
+
+                        .personal-area__settings__area__account__personal-information__input-simple
+                            .simple-input
+                                p Пароль
+                                input(
+                                    type='password'
+                                )
+                            .input-button
+                                a(href='#') Изменить
+                        .personal-area__settings__area__account__personal-information__input-simple
+                            .simple-input.simple-select
+                                p Язык
+                                select
+                                    option(value='0') Русский
+                                    option(value='1') Украинсикй
+                            .simple-input.simple-select
+                                p Страна/Регион
+                                select
+                                    option(value='0') Россия (РФ)
+                                    option(value='1') Украина
+                        .personal-area__settings__area__account__personal-information__input-simple
+                            .simple-input.simple-select
+                                p Пол
+                                select
+                                    option(value='0') Мужчина
+                                    option(value='1') Женщина
+
+
+                        .personal-area__settings__area__account__personal-information__input-radio
+                            h3 Параметры входа
+                            .inputs-radio
+                                input(
+                                    type='checkbox'
+                                    id="radioGoogle"
+                                )
+                                label(for="radioGoogle") Использовать аккаунт Google для входа
+                            .inputs-radio
+                                input(
+                                    type='checkbox'
+                                    id="radioFacebook"
+                                )
+                                label(for="radioFacebook") Подключить аккаунт Facebook
+                        .personal-area__settings__area__account__personal-information__delete-button
+                            a(href='#') Удалить аккаунт
             .personal-area__settings__menu
                 ul
                     li
@@ -59,7 +145,8 @@ block content
                         a(href='#') Конфиденциальность
                     li
                         a(href='#') Безоапсность
-                a(href='#') Сохранить изменения
+                .personal-area__settings__menu__button
+                    a(href='#') Сохранить изменения
 
 
 

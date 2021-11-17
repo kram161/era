@@ -7,3 +7,15 @@ window.addEventListener('load', function() {
         taNumber.innerText = ta.value.length;
     });
 });
+
+
+let input = document.querySelector("#interestsTa");
+input.addEventListener("keypress", function (evt) {
+
+    let words = this.value.split(/\s+/);
+    let numWords = words.length;
+    let maxWords = 5;
+    if (numWords > maxWords) {
+        evt.preventDefault();
+    }
+});

@@ -64,27 +64,102 @@
             <div class="personal-area__settings__area__profile">
               <h2>Настройки профиля</h2>
               <div class="personal-area__settings__area__profile__personal-information">
-                <div>
+                <div class="personal-area__settings__area__profile__personal-information__input-simple">
                   <p>Имя</p>
                   <input type="text" placeholder="Динозавр">
                 </div>
-                <div>
+                <div class="personal-area__settings__area__profile__personal-information__input-simple">
                   <p>Фамилия</p>
                   <input type="text" placeholder="Никита">
                 </div>
-                <div>
+                <div class="personal-area__settings__area__profile__personal-information__input-simple">
                   <p>Короткое имя</p>
                   <input type="text" placeholder="@">
                 </div>
-                <div>
+                <div class="personal-area__settings__area__profile__personal-information__text-area">
                   <p>Описание профиля</p>
                   <textarea id="ta" placeholder="Самая топовая вайфу твоего района" maxlength="300"></textarea>
                   <div><span id="taNumber">0</span><span>/300</span></div>
+                </div>
+                <div class="personal-area__settings__area__profile__personal-information__input-simple">
+                  <p>Ваше место проживания</p>
+                  <input type="text" placeholder="Москва">
+                </div>
+                <div class="personal-area__settings__area__profile__personal-information__interests">
+                  <p>Интересы</p>
+                  <input id="interestsTa" type="text">
+                </div>
+                <div class="personal-area__settings__area__profile__personal-information__input-simple">
+                  <p>Instagram</p>
+                  <input type="text" placeholder="@">
+                </div>
+                <div class="personal-area__settings__area__profile__personal-information__input-simple">
+                  <p>VK</p>
+                  <input type="text" placeholder="https: //">
                 </div>
               </div>
             </div>
             <div class="personal-area__settings__area__account">
               <h2>Настройки аккаунта</h2>
+              <div class="personal-area__settings__area__account__personal-information">
+                <div class="personal-area__settings__area__account__personal-information__input-simple simple-input">
+                  <div class="simple-input">
+                    <p>Электронная почта</p>
+                    <input type="email" placeholder="Nikitadinosaur@gmail.com">
+                  </div>
+                </div>
+                <div class="personal-area__settings__area__account__personal-information__input-simple">
+                  <div class="simple-input">
+                    <p>Логин</p>
+                    <input type="text">
+                  </div>
+                  <div class="input-button"><a href="#">Изменить</a></div>
+                </div>
+                <div class="personal-area__settings__area__account__personal-information__input-simple">
+                  <div class="simple-input">
+                    <p>Пароль</p>
+                    <input type="password">
+                  </div>
+                  <div class="input-button"><a href="#">Изменить</a></div>
+                </div>
+                <div class="personal-area__settings__area__account__personal-information__input-simple">
+                  <div class="simple-input simple-select">
+                    <p>Язык</p>
+                    <select>
+                      <option value="0">Русский</option>
+                      <option value="1">Украинсикй</option>
+                    </select>
+                  </div>
+                  <div class="simple-input simple-select">
+                    <p>Страна/Регион</p>
+                    <select>
+                      <option value="0">Россия (РФ)</option>
+                      <option value="1">Украина</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="personal-area__settings__area__account__personal-information__input-simple">
+                  <div class="simple-input simple-select">
+                    <p>Пол</p>
+                    <select>
+                      <option value="0">Мужчина</option>
+                      <option value="1">Женщина</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="personal-area__settings__area__account__personal-information__input-radio">
+                  <h3>Параметры входа</h3>
+                  <div class="inputs-radio">
+                    <input type="checkbox" id="radioGoogle">
+                    <label for="radioGoogle">Использовать аккаунт Google для входа</label>
+                  </div>
+                  <div class="inputs-radio">
+                    <input type="checkbox" id="radioFacebook">
+                    <label for="radioFacebook">Подключить аккаунт Facebook</label>
+                  </div>
+                </div>
+                <div class="personal-area__settings__area__account__personal-information__delete-button"><a href="#">Удалить аккаунт</a></div>
+              </div>
             </div>
           </div>
           <div class="personal-area__settings__menu">
@@ -96,7 +171,8 @@
               <li><a href="#">Разрешения</a></li>
               <li><a href="#">Конфиденциальность</a></li>
               <li><a href="#">Безоапсность</a></li>
-            </ul><a href="#">Сохранить изменения</a>
+            </ul>
+            <div class="personal-area__settings__menu__button"><a href="#">Сохранить изменения</a></div>
           </div>
         </div>
       </div>
