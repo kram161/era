@@ -6,6 +6,9 @@
   font-size: 10px;
 }
 .main{
+  padding: 40px 0 0 0;
+}
+.main-first{
   padding: 140px 0 0 0;
 }
 .personal-area{
@@ -496,6 +499,194 @@
       li:last-child{
         flex: 1;
       }
+    }
+  }
+}
+.collection{
+  padding: 180px 0 0 0;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    margin:0 0 36px 0;
+    h2{
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+    svg{
+      margin: auto 0 auto 40px;
+    }
+  }
+  &__description{
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    img{
+      height: 240px;
+      width: 240px;
+      object-fit: cover;
+    }
+    &__text-block{
+      margin:0 0 0 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      h3{
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin:0 0 23px 0;
+      }
+      p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 0 0 38px 10px;
+        line-height: 16px;
+      }
+      .menu__first-block__user-profile{
+        margin:0 0 0 10px;
+      }
+      &__tags{
+        display: flex;
+        justify-content: flex-start;
+        margin:auto 0 0 10px;
+        a{
+          font-weight: 400;
+          font-size: 1.6rem;
+          background: #ECECEC;
+          padding: 7px 10px;
+          color:#5C5C5C;
+          margin: 0 20px 0 0;
+          text-decoration: none;
+        }
+        a:hover{
+          color:#000;
+        }
+      }
+    }
+  }
+}
+.auth,.reg{
+  background-image: url('../../assets/img/testImg4.png');
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  &__block{
+    position: absolute;
+    z-index: 10;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h3{
+      font-size: 2.4rem;
+      font-weight: 800;
+      background: #000;
+      color:#fff;
+      text-align: center;
+      padding: 13px 0;
+      margin:0 0 40px 0;
+    }
+    &__form{
+      background: #fff;
+      padding: 40px;
+      h2{
+        color:#000;
+        font-weight: 700;
+        font-size: 3.2rem;
+        margin:0 0 21px 0;
+      }
+      &__input{
+        margin:0 0 25px 0;
+        p{
+          font-size: 1.2rem;
+          font-weight: 300;
+          margin:0 0 0 10px;
+        }
+        input{
+          font-size: 1.6rem;
+          font-weight: 400;
+          padding: 12px 10px;
+          border:1px solid #5C5C5C;
+          width: 100%;
+        }
+        input::placeholder{
+          color:#000;
+        }
+      }
+      &__auth-button{
+        margin:0 0 28px 0;
+        a{
+          background: #000;
+          color: #fff;
+          text-align: center;
+          display: block;
+          padding: 13px 170px;
+          text-decoration: none;
+          transition: 0.5s ease;
+          border: 2px solid #000;
+          font-weight: 400;
+          font-size: 1.4rem;
+          box-sizing: border-box;
+        }
+        a:hover{
+          transition: 0.5s ease;
+          background: none;
+          color:#000;
+        }
+      }
+      &__sn{
+        p{
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin:0 0 8px 0;
+        }
+        &__icons{
+          display: flex;
+          justify-content: space-between;
+          a{
+            background: #ECECEC;
+            color: #5C5C5C;
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 12px 0;
+            width: 100px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+          }
+          a:hover{
+            color: #000;
+          }
+        }
+      }
+      &__reg-button{
+        margin: 40px 0 0 0;
+        a{
+          background: none;
+          color: #000;
+          text-align: center;
+          display: block;
+          padding: 13px 170px;
+          text-decoration: none;
+          transition: 0.5s ease;
+          border: 2px solid #000;
+          font-weight: 400;
+          font-size: 1.4rem;
+          box-sizing: border-box;
+        }
+        a:hover{
+          transition: 0.5s ease;
+          background: #000;
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+
+.auth,/*.reg*/{
+  &__block{
+    &__form{
+      display: none;
     }
   }
 }

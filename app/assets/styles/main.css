@@ -12583,6 +12583,10 @@ textarea.form-control-lg {
 }
 
 .main {
+  padding: 40px 0 0 0;
+}
+
+.main-first {
   padding: 140px 0 0 0;
 }
 
@@ -13228,4 +13232,231 @@ textarea.form-control-lg {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.collection {
+  padding: 180px 0 0 0;
+}
+.collection__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 36px 0;
+}
+.collection__header h2, .collection__header .h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.collection__header svg {
+  margin: auto 0 auto 40px;
+}
+.collection__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 90%;
+}
+.collection__description img {
+  height: 240px;
+  width: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.collection__description__text-block {
+  margin: 0 0 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.collection__description__text-block h3, .collection__description__text-block .h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 0 23px 0;
+}
+.collection__description__text-block p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0 0 38px 10px;
+  line-height: 16px;
+}
+.collection__description__text-block .menu__first-block__user-profile {
+  margin: 0 0 0 10px;
+}
+.collection__description__text-block__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: auto 0 0 10px;
+}
+.collection__description__text-block__tags a {
+  font-weight: 400;
+  font-size: 1.6rem;
+  background: #ECECEC;
+  padding: 7px 10px;
+  color: #5C5C5C;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+}
+.collection__description__text-block__tags a:hover {
+  color: #000;
+}
+
+.auth, .reg {
+  background-image: url("../../assets/img/testImg4.png");
+  background-size: 100%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.auth__block, .reg__block {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.auth__block h3, .auth__block .h3, .reg__block h3, .reg__block .h3 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 13px 0;
+  margin: 0 0 40px 0;
+}
+.auth__block__form, .reg__block__form {
+  background: #fff;
+  padding: 40px;
+}
+.auth__block__form h2, .auth__block__form .h2, .reg__block__form h2, .reg__block__form .h2 {
+  color: #000;
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin: 0 0 21px 0;
+}
+.auth__block__form__input, .reg__block__form__input {
+  margin: 0 0 25px 0;
+}
+.auth__block__form__input p, .reg__block__form__input p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0 0 0 10px;
+}
+.auth__block__form__input input, .reg__block__form__input input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 12px 10px;
+  border: 1px solid #5C5C5C;
+  width: 100%;
+}
+.auth__block__form__input input::-webkit-input-placeholder, .reg__block__form__input input::-webkit-input-placeholder {
+  color: #000;
+}
+.auth__block__form__input input::-moz-placeholder, .reg__block__form__input input::-moz-placeholder {
+  color: #000;
+}
+.auth__block__form__input input:-ms-input-placeholder, .reg__block__form__input input:-ms-input-placeholder {
+  color: #000;
+}
+.auth__block__form__input input::-ms-input-placeholder, .reg__block__form__input input::-ms-input-placeholder {
+  color: #000;
+}
+.auth__block__form__input input::placeholder, .reg__block__form__input input::placeholder {
+  color: #000;
+}
+.auth__block__form__auth-button, .reg__block__form__auth-button {
+  margin: 0 0 28px 0;
+}
+.auth__block__form__auth-button a, .reg__block__form__auth-button a {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  display: block;
+  padding: 13px 170px;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border: 2px solid #000;
+  font-weight: 400;
+  font-size: 1.4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.auth__block__form__auth-button a:hover, .reg__block__form__auth-button a:hover {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: none;
+  color: #000;
+}
+.auth__block__form__sn p, .reg__block__form__sn p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.auth__block__form__sn__icons, .reg__block__form__sn__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.auth__block__form__sn__icons a, .reg__block__form__sn__icons a {
+  background: #ECECEC;
+  color: #5C5C5C;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 12px 0;
+  width: 100px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.auth__block__form__sn__icons a:hover, .reg__block__form__sn__icons a:hover {
+  color: #000;
+}
+.auth__block__form__reg-button, .reg__block__form__reg-button {
+  margin: 40px 0 0 0;
+}
+.auth__block__form__reg-button a, .reg__block__form__reg-button a {
+  background: none;
+  color: #000;
+  text-align: center;
+  display: block;
+  padding: 13px 170px;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border: 2px solid #000;
+  font-weight: 400;
+  font-size: 1.4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.auth__block__form__reg-button a:hover, .reg__block__form__reg-button a:hover {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: #000;
+  color: #fff;
+}
+
+.auth__block__form {
+  display: none;
 }

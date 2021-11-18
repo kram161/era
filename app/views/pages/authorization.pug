@@ -1,0 +1,62 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+    .auth.reg
+        .auth__block.reg__block
+            h3 Era
+            .auth__block__form
+                h2 Вход
+                .auth__block__form__input
+                    p Логин
+                    input(
+                        type='text'
+                    )
+                .auth__block__form__input
+                    p Пароль
+                    input(
+                        type='password'
+                    )
+                .auth__block__form__auth-button
+                    a(href='#') Войти
+                .auth__block__form__sn
+                    p Войти с помощью
+                    .auth__block__form__sn__icons
+                        a(href='#') Google
+                        a(href='#') VK
+                        a(href='#') Facebook
+                .auth__block__form__reg-button
+                    a(href='#') Нет аккаунта
+            .reg__block__form
+                h2 Создание аккаунта
+                .auth__block__form__input
+                    p Логин
+                    input(
+                        type='text'
+                    )
+                .auth__block__form__input
+                    p Логин
+                    input(
+                        type='text'
+                    )
+                .auth__block__form__input
+                    p Пароль
+                    input(
+                        type='password'
+                    )
+                .auth__block__form__auth-button
+                    a(href='#') Создать аккаунт
+                .auth__block__form__sn
+                    p Или зарегистрируйтесь с помощью
+                    .auth__block__form__sn__icons
+                        a(href='#') Google
+                        a(href='#') VK
+                        a(href='#') Facebook
+                .auth__block__form__reg-button
+                    a(href='#') Войти в существующий аккаунт
+
+
+
+block scripts
+    script(src="assets/scripts/main.min.js")
