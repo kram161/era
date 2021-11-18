@@ -44,4 +44,19 @@ input.addEventListener("keypress", function (evt) {
         evt.preventDefault();
     }
 });
+document.getElementById('inputActivator').onclick = function() {
+    document.getElementById('helperActive').classList.toggle('menu__first-block__search-box__short-active');
+    document.getElementById('inputActive').classList.toggle('menu__first-block__search-box-active');
+    function menuClose() {
+        document.getElementById('helperActive').classList.remove('menu__first-block__search-box__short-active');
+        document.getElementById('inputActive').classList.remove('menu__first-block__search-box-active');
+    }
+    function menuCloseClickOutside(e) {
+        if(!e.target.matches('.menu__first-block__search-box,.menu__first-block__search-box *')) {
+            menuClose();
+        }
+    }
+    document.addEventListener('click', menuCloseClickOutside);
+    document.addEventListener('touchstart', menuCloseClickOutside);
+}
 
