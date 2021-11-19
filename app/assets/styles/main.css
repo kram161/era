@@ -13457,7 +13457,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.auth__block__form {
+.reg__block__form {
   display: none;
 }
 
@@ -13651,6 +13651,25 @@ textarea.form-control-lg {
   }
   .cart__inf a {
     text-align: center;
+  }
+
+  .auth__block h3, .auth__block .h3, .reg__block h3, .reg__block .h3 {
+    margin: 0;
+  }
+  .auth__block__form h2, .auth__block__form .h2, .reg__block__form h2, .reg__block__form .h2 {
+    font-size: 2.4rem;
+  }
+  .auth__block__form__input input, .reg__block__form__input input {
+    font-size: 1.2rem;
+    padding: 8px 6px;
+  }
+  .auth__block__form__auth-button a, .auth__block__form__reg-button a, .reg__block__form__auth-button a, .reg__block__form__reg-button a {
+    padding: 8px 0;
+    width: 100%;
+  }
+  .auth__block__form__sn__icons a, .reg__block__form__sn__icons a {
+    padding: 12px 20px;
+    width: 100%;
   }
 }
 @media (max-width: 374px) {
