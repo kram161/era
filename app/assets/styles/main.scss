@@ -765,6 +765,34 @@
         }
       }
     }
+    &__settings{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a{
+        display: block;
+        margin:0 auto 10px auto;
+        text-align: center;
+      }
+      &__area{
+        margin: 0;
+        &__profile{
+          &__personal-information{
+            padding: 0;
+          }
+        }
+        &__account{
+          &__personal-information{
+            padding: 0;
+            &__input-simple{
+              .input-button{
+                margin:17px 0 auto 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width:374px){
@@ -804,4 +832,5 @@
       }
     }
   }
+
 }

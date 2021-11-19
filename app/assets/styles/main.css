@@ -13523,6 +13523,35 @@ textarea.form-control-lg {
     height: auto;
     width: 100%;
   }
+  .personal-area__settings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .personal-area__settings a {
+    display: block;
+    margin: 0 auto 10px auto;
+    text-align: center;
+  }
+  .personal-area__settings__area {
+    margin: 0;
+  }
+  .personal-area__settings__area__profile__personal-information {
+    padding: 0;
+  }
+  .personal-area__settings__area__account__personal-information {
+    padding: 0;
+  }
+  .personal-area__settings__area__account__personal-information__input-simple .input-button {
+    margin: 17px 0 auto 0;
+  }
 }
 @media (max-width: 374px) {
   .personal-area__profile__description {
