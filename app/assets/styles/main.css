@@ -12721,7 +12721,7 @@ textarea.form-control-lg {
      object-fit: cover;
 }
 .personal-area__galery__unit__description, .personal-area__collection__unit__description {
-  margin: 14px 0 0 0;
+  margin: 14px 0 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13479,20 +13479,71 @@ textarea.form-control-lg {
     margin: 0;
   }
   .personal-area__profile__description img {
-    width: 150px;
-    height: 150px;
-    margin: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto 0;
   }
   .personal-area__profile__description__info {
-    margin: 10px 0 0 0;
+    margin: auto 0 auto 10px;
   }
   .personal-area__profile__description__info__name h2, .personal-area__profile__description__info__name .h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
   .personal-area__profile__description__info__text p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .personal-area__profile__description__info__sub p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+  .personal-area__profile__description__icons {
+    margin: auto 0 auto auto;
+  }
+  .personal-area__profile__description__icons a {
+    display: block;
+    margin: 8px 0;
+  }
+  .personal-area__profile__description__icons a svg {
+    margin: 0 0 0 auto;
+  }
+  .personal-area__menu {
+    margin: 30px 0 0 0;
+  }
+  .personal-area__menu ul li a {
+    font-size: 1.8rem;
+    margin: 0 15px 0 0;
+  }
+  .personal-area__galery, .personal-area__collection {
+    margin: 20px 0 0 0;
+  }
+  .personal-area__galery__unit a, .personal-area__collection__unit a {
+    height: auto;
+    width: 100%;
+  }
+  .personal-area__galery__unit a img, .personal-area__collection__unit a img {
+    height: auto;
+    width: 100%;
+  }
+}
+@media (max-width: 374px) {
+  .personal-area__profile__description {
+    margin: 0;
+  }
+  .personal-area__profile__description img {
+    width: 80px;
+    height: 80px;
+    margin: auto 0;
+  }
+  .personal-area__profile__description__info {
+    margin: auto 0 auto 10px;
+  }
+  .personal-area__profile__description__info__name h2, .personal-area__profile__description__info__name .h2 {
+    font-size: 1.6rem;
+  }
+  .personal-area__profile__description__info__text p {
+    margin: 10px 0 0;
+    font-size: 1rem;
+  }
+  .personal-area__profile__description__info__sub p {
+    font-size: 1rem;
   }
 }

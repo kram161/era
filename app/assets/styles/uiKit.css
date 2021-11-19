@@ -12750,6 +12750,8 @@ textarea.form-control-lg {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .menu__first-block__search-box__short__unit__tags p {
   margin: 0 20px 0 10px;
@@ -13445,6 +13447,12 @@ textarea.form-control-lg {
   }
   .menu__first-block__search-box {
     margin: auto;
+  }
+  .menu__first-block__search-box__short__unit {
+    margin: 0 0 10px 0;
+  }
+  .menu__first-block__search-box__short__unit__tags p {
+    margin: 0 0 10px 10px;
   }
   .menu__first-block__burger {
     display: block;
