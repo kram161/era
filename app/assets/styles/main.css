@@ -13595,6 +13595,63 @@ textarea.form-control-lg {
   .collection__description__text-block__tags a {
     margin: 0 10px 10px 0;
   }
+
+  .cart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cart__contents__unit {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 1px solid rgba(92, 92, 92, 0.5);
+    margin: 15px 0 0 0;
+  }
+  .cart__contents__unit a {
+    margin: 0 auto;
+  }
+  .cart__contents__unit a img {
+    width: 120px;
+    height: 120px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .cart__contents__unit__description {
+    margin: 10px 0;
+  }
+  .cart__contents__unit__description h3, .cart__contents__unit__description .h3 {
+    font-size: 1.6rem;
+  }
+  .cart__contents__unit__description p {
+    font-size: 1.2rem;
+  }
+  .cart__contents__unit__description__license span {
+    font-size: 1.2rem;
+  }
+  .cart__contents__unit__description a {
+    margin: 10px auto 0 auto;
+  }
+  .cart__contents__unit__price {
+    margin: 0 auto;
+  }
+  .cart__contents__unit__price p {
+    display: block;
+  }
+  .cart__inf {
+    margin: 20px 0;
+  }
+  .cart__inf a {
+    text-align: center;
+  }
 }
 @media (max-width: 374px) {
   .personal-area__profile__description {

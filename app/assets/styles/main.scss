@@ -834,6 +834,55 @@
       }
     }
   }
+  .cart{
+    display: flex;
+    flex-direction: column;
+    &__contents{
+      &__unit{
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid rgba(92, 92, 92, 0.5);
+        margin:15px 0 0 0;
+        a{
+          margin:0 auto;
+          img{
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+          }
+        }
+        &__description{
+          margin:10px 0;
+          h3{
+            font-size: 1.6rem;
+          }
+          p{
+            font-size: 1.2rem;
+          }
+          &__license{
+            span{
+              font-size: 1.2rem;
+            }
+          }
+          a{
+            margin:10px auto 0 auto;
+          }
+        }
+        &__price{
+          margin: 0 auto;
+          p{
+            display: block;
+          }
+        }
+      }
+    }
+    &__inf{
+      margin:20px 0;
+      a{
+        text-align: center;
+      }
+    }
+  }
 }
 @media (max-width:374px){
   .personal-area {
