@@ -583,11 +583,11 @@
       color:#fff;
       text-align: center;
       padding: 13px 0;
-      margin:0 0 40px 0;
+      margin:0 0 20px 0;
     }
     &__form{
       background: #fff;
-      padding: 40px;
+      padding: 30px;
       h2{
         color:#000;
         font-weight: 700;
@@ -659,7 +659,7 @@
         }
       }
       &__reg-button{
-        margin: 40px 0 0 0;
+        margin: 20px 0 0 0;
         a{
           background: none;
           color: #000;
@@ -687,6 +687,49 @@
   &__block{
     &__form{
       display: none;
+    }
+  }
+}
+@media (max-width:1440px){
+  .auth__block__form__reg-button a, .reg__block__form__reg-button a,.auth__block__form__auth-button a, .reg__block__form__auth-button a{
+    padding: 13px 130px;
+  }
+  .auth__block__form__reg-button, .reg__block__form__reg-button{
+    margin:20px 0 0 0;
+  }
+  .auth__block__form, .reg__block__form{
+    padding: 20px;
+  }
+}
+@media (max-width:541px){
+  .personal-area{
+    &__profile{
+      &__description{
+        margin:0;
+        img{
+          width: 150px;
+          height: 150px;
+          margin:0;
+        }
+        &__info{
+          margin:10px 0 0 0;
+          &__name{
+            h2{
+              font-size: 2.4rem;
+            }
+          }
+          &__text{
+            p{
+              font-size: 1.4rem;
+            }
+          }
+          &__sub{
+            p{
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
     }
   }
 }

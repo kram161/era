@@ -13339,11 +13339,11 @@ textarea.form-control-lg {
   color: #fff;
   text-align: center;
   padding: 13px 0;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 }
 .auth__block__form, .reg__block__form {
   background: #fff;
-  padding: 40px;
+  padding: 30px;
 }
 .auth__block__form h2, .auth__block__form .h2, .reg__block__form h2, .reg__block__form .h2 {
   color: #000;
@@ -13433,7 +13433,7 @@ textarea.form-control-lg {
   color: #000;
 }
 .auth__block__form__reg-button, .reg__block__form__reg-button {
-  margin: 40px 0 0 0;
+  margin: 20px 0 0 0;
 }
 .auth__block__form__reg-button a, .reg__block__form__reg-button a {
   background: none;
@@ -13459,4 +13459,40 @@ textarea.form-control-lg {
 
 .auth__block__form {
   display: none;
+}
+
+@media (max-width: 1440px) {
+  .auth__block__form__reg-button a, .reg__block__form__reg-button a, .auth__block__form__auth-button a, .reg__block__form__auth-button a {
+    padding: 13px 130px;
+  }
+
+  .auth__block__form__reg-button, .reg__block__form__reg-button {
+    margin: 20px 0 0 0;
+  }
+
+  .auth__block__form, .reg__block__form {
+    padding: 20px;
+  }
+}
+@media (max-width: 541px) {
+  .personal-area__profile__description {
+    margin: 0;
+  }
+  .personal-area__profile__description img {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+  .personal-area__profile__description__info {
+    margin: 10px 0 0 0;
+  }
+  .personal-area__profile__description__info__name h2, .personal-area__profile__description__info__name .h2 {
+    font-size: 2.4rem;
+  }
+  .personal-area__profile__description__info__text p {
+    font-size: 1.4rem;
+  }
+  .personal-area__profile__description__info__sub p {
+    font-size: 1.4rem;
+  }
 }
