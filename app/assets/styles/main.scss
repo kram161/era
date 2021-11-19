@@ -794,6 +794,46 @@
       }
     }
   }
+  .collection{
+    padding: 140px 0 0 0;
+    &__header{
+      h2{
+        font-size: 2.0rem;
+        margin:auto 0;
+      }
+      &__icons{
+        svg{
+          margin: auto 0 auto 20px;
+        }
+      }
+    }
+    &__description{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      img{
+        margin: 0 auto;
+      }
+      &__text-block{
+        margin:0;
+        h3{
+          margin:20px 0 20px 0;
+          font-size: 1.8rem;
+        }
+        p{
+          font-size: 1.4rem;
+          margin: 0 0 38px 0;
+        }
+        &__tags {
+          flex-wrap: wrap;
+          margin:0;
+          a{
+            margin:0 10px 10px 0;
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width:374px){
   .personal-area {
