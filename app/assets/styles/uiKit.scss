@@ -130,7 +130,7 @@
         }
       }
     }
-    &__notification,&__chat{
+    &__notification,&__cart{
       margin:auto 30px;
       a{
         display: block;
@@ -249,22 +249,21 @@
       justify-content: flex-start;
       right: 25px;
       top:25px;
-      svg{
+      bottom:24px;
+      opacity: 0;
+      transition:0.5s ease;
+      &__save-icon-active,&__like-icon-active,.like-icon-deactivate{
+        display: none;
         opacity: 0;
-        transition:0.5s ease;
       }
-      svg:nth-child(1){
-        margin-top:0;
+      &__save-icon-active,&__more-button,&__settings-button,&__save-icon,&__like-icon{
+        margin:0 0 24px 0;
       }
-      svg:not(:first-child){
-        margin:25px 0;
+      &__more-button{
+        flex: 1 0;
       }
-      svg:nth-child(2){
-        margin-top:auto;
-        margin-bottom:0;
-      }
-      svg:last-child{
-        margin: 0 0 50px 0;
+      &__like-icon,&__like-icon-active{
+        margin:0 0 48px 0;
       }
     }
   }
@@ -284,25 +283,25 @@
     }
   }
 }
-.main__page__picture:hover{
-  a:nth-child(1){
-    img{
-      transition:0.5s ease;
+.main__page__picture:hover {
+  a:nth-child(1) {
+    img {
+      transition: 0.5s ease;
       filter: brightness(60%);
     }
     .main__page__picture__hidden-info{
-      svg{
-        opacity: 1;
-        transition:0.5s ease;
-      }
-    }
-  }
-  a:nth-child(2){
-    svg{
       opacity: 1;
       transition:0.5s ease;
     }
   }
+
+  a:nth-child(2) {
+    svg {
+      opacity: 1;
+      transition: 0.5s ease;
+    }
+  }
+
 }
 .photo-modal{
   display: none;
@@ -690,7 +689,7 @@
   }
   .menu{
     &__first-block{
-      &__description,&__notification,&__chat,&__user-profile{
+      &__description,&__notification,&__cart,&__user-profile{
         display: none;
       }
       &__logo{
@@ -768,7 +767,7 @@
           &__icons{
             display: flex;
             justify-content: space-between;
-            &__notification,&__chat{
+            &__notification,&__cart{
               display: block;
               margin:0;
             }
@@ -823,8 +822,19 @@
     column-count: 1;
     .main__page__picture{
       max-width: 100%;
-      img{
-        width: 100%;
+      a:nth-child(1){
+        min-height: 200px;
+        img{
+          min-height: 200px;
+          object-fit: cover;
+        }
+        .main__page__picture__hidden-info{
+          top:5px;
+          right: 10px;
+          &__more-button,&__settings-button,&__save-icon,&__like-icon,&__like-icon-active,&__save-icon-active{
+            margin:0 0 10px 0;
+          }
+        }
       }
     }
   }

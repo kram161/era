@@ -12761,10 +12761,10 @@ textarea.form-control-lg {
   color: #5C5C5C;
   padding: 7px 10px;
 }
-.menu__first-block__notification, .menu__first-block__chat {
+.menu__first-block__notification, .menu__first-block__cart {
   margin: auto 30px;
 }
-.menu__first-block__notification a, .menu__first-block__chat a {
+.menu__first-block__notification a, .menu__first-block__cart a {
   display: block;
 }
 .menu__first-block__user-profile {
@@ -12908,24 +12908,25 @@ textarea.form-control-lg {
           justify-content: flex-start;
   right: 25px;
   top: 25px;
-}
-.main__page__picture a:nth-child(1) .main__page__picture__hidden-info svg {
+  bottom: 24px;
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
-.main__page__picture a:nth-child(1) .main__page__picture__hidden-info svg:nth-child(1) {
-  margin-top: 0;
+.main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon-active, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon-active, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info .like-icon-deactivate {
+  display: none;
+  opacity: 0;
 }
-.main__page__picture a:nth-child(1) .main__page__picture__hidden-info svg:not(:first-child) {
-  margin: 25px 0;
+.main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon-active, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__more-button, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__settings-button, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon {
+  margin: 0 0 24px 0;
 }
-.main__page__picture a:nth-child(1) .main__page__picture__hidden-info svg:nth-child(2) {
-  margin-top: auto;
-  margin-bottom: 0;
+.main__page__picture a:nth-child(1) .main__page__picture__hidden-info__more-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
 }
-.main__page__picture a:nth-child(1) .main__page__picture__hidden-info svg:last-child {
-  margin: 0 0 50px 0;
+.main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon, .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon-active {
+  margin: 0 0 48px 0;
 }
 .main__page__picture a:nth-child(2) {
   text-decoration: none;
@@ -12954,7 +12955,7 @@ textarea.form-control-lg {
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
 }
-.main__page__picture:hover a:nth-child(1) .main__page__picture__hidden-info svg {
+.main__page__picture:hover a:nth-child(1) .main__page__picture__hidden-info {
   opacity: 1;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -13439,7 +13440,7 @@ textarea.form-control-lg {
     padding: 0 10px;
   }
 
-  .menu__first-block__description, .menu__first-block__notification, .menu__first-block__chat, .menu__first-block__user-profile {
+  .menu__first-block__description, .menu__first-block__notification, .menu__first-block__cart, .menu__first-block__user-profile {
     display: none;
   }
   .menu__first-block__logo {
@@ -13527,7 +13528,7 @@ textarea.form-control-lg {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .menu__first-block__burger__block__icons__notification, .menu__first-block__burger__block__icons__chat {
+  .menu__first-block__burger__block__icons__notification, .menu__first-block__burger__block__icons__cart {
     display: block;
     margin: 0;
   }
@@ -13579,7 +13580,19 @@ textarea.form-control-lg {
   .picture__page .main__page__picture {
     max-width: 100%;
   }
-  .picture__page .main__page__picture img {
-    width: 100%;
+  .picture__page .main__page__picture a:nth-child(1) {
+    min-height: 200px;
+  }
+  .picture__page .main__page__picture a:nth-child(1) img {
+    min-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info {
+    top: 5px;
+    right: 10px;
+  }
+  .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__more-button, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__settings-button, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon-active, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon-active {
+    margin: 0 0 10px 0;
   }
 }
