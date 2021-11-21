@@ -118,3 +118,14 @@ for(let i = 0; i < sIconA.length; i++){
         sIconA[i].style.opacity = "0"
     })
 }
+
+
+
+let dropArea = document.getElementById('drop-area');
+
+dropArea.ondragover = function () { this.className = 'hover'; return false; };
+dropArea.ondragend = function () { this.className = ''; return false; };
+dropArea.ondrop = function (e) {
+    this.className = '';
+    e.preventDefault();
+}

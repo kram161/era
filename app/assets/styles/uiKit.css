@@ -13156,6 +13156,7 @@ textarea.form-control-lg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: #fff;
 }
 .photo-modal__description__text-block {
   margin: 55px 0 0 0;
@@ -13223,7 +13224,7 @@ textarea.form-control-lg {
 }
 
 .create-collection {
-  display: none;
+  display: block;
   position: absolute;
   width: 98%;
   height: 540px;
@@ -13278,6 +13279,21 @@ textarea.form-control-lg {
   margin: 0;
   top: calc(50% - 24px);
   left: calc(50% - 72px);
+}
+.create-collection__block__input-file .drop-text {
+  display: none;
+}
+.create-collection__block__input-file #drop-area.hover {
+  width: 240px;
+  height: 240px;
+  border: none;
+  background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: grey; stroke-width: 4; stroke-dasharray: 8 8'/></svg>");
+}
+.create-collection__block__input-file #drop-area.hover .simple-text {
+  display: none !important;
+}
+.create-collection__block__input-file #drop-area.hover .drop-text {
+  display: block !important;
 }
 .create-collection__block__inputs {
   width: 100%;
