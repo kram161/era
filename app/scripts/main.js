@@ -58,34 +58,93 @@ try{
 catch {
 
 }
-document.getElementById('inputActivator').onclick = function() {
-    document.getElementById('helperActive').classList.toggle('menu__first-block__search-box__short-active');
-    document.getElementById('inputActive').classList.toggle('menu__first-block__search-box-active');
-    function menuClose() {
-        document.getElementById('helperActive').classList.remove('menu__first-block__search-box__short-active');
-        document.getElementById('inputActive').classList.remove('menu__first-block__search-box-active');
-    }
-    function menuCloseClickOutside(e) {
-        if(!e.target.matches('.menu__first-block__search-box,.menu__first-block__search-box *')) {
-            menuClose();
+try{
+    document.getElementById('inputActivator').onclick = function() {
+        document.getElementById('helperActive').classList.toggle('menu__first-block__search-box__short-active');
+        document.getElementById('inputActive').classList.toggle('menu__first-block__search-box-active');
+        function menuClose() {
+            document.getElementById('helperActive').classList.remove('menu__first-block__search-box__short-active');
+            document.getElementById('inputActive').classList.remove('menu__first-block__search-box-active');
         }
+        function menuCloseClickOutside(e) {
+            if(!e.target.matches('.menu__first-block__search-box,.menu__first-block__search-box *')) {
+                menuClose();
+            }
+        }
+        document.addEventListener('click', menuCloseClickOutside);
+        document.addEventListener('touchstart', menuCloseClickOutside);
     }
-    document.addEventListener('click', menuCloseClickOutside);
-    document.addEventListener('touchstart', menuCloseClickOutside);
+}
+catch {
+
+}
+try{
+    window.addEventListener('load', function (){
+        const notificationActivator = document.getElementById('notification-activator');
+        const notificationModal = document.getElementById('notification-activator-modal');
+        const toggleMenu = () => {
+            notificationModal.classList.toggle('menu__first-block__notification__modal-active');
+        }
+        notificationActivator.addEventListener('click', e => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+        document.addEventListener('click', e => {
+            let target = e.target;
+            let its_menu = target == notificationModal || notificationModal.contains(target);
+            let its_hamburger = target == notificationActivator;
+            let menu_is_active = notificationModal.classList.contains('menu__first-block__notification__modal-active');
+            if (!its_menu && !its_hamburger && menu_is_active) {
+                toggleMenu();
+            }
+        })
+    })
+}
+catch {
 }
 
+window.addEventListener('load', function (){
+    const burgerActivator = document.getElementById('burgerActivator');
+    const burgerActive = document.querySelector('.menu__first-block__burger__block');
+    const toggleMenu = () => {
+        burgerActive.classList.toggle('menu__first-block__burger__block-active');
+    }
+    burgerActivator.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+    document.addEventListener('click', e => {
+        let target = e.target;
+        let its_menu = target == burgerActive || burgerActivator.contains(target);
+        let its_hamburger = target == burgerActivator;
+        let menu_is_active = burgerActive.classList.contains('menu__first-block__burger__block-active');
+        if (!its_menu && !its_hamburger && menu_is_active) {
+            toggleMenu();
+            document.querySelector('.menu__first-block__burger__button__cheeckbox').checked = false;
+        }
+    })
+})
+window.addEventListener('load', function (){
+    const notificationActivatorMini = document.getElementById('notification-activator-mini');
+    const notificationModalMini = document.getElementById('notification-modal-mini');
+    const toggleMenu = () => {
+        notificationModalMini.classList.toggle('menu__first-block__notification__modal-mini-active');
+    }
+    notificationActivatorMini.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+    document.addEventListener('click', e => {
+        let target = e.target;
+        let its_notificationModal = target == notificationModalMini || notificationActivatorMini.contains(target);
+        let its_notificationActivator = target == notificationActivatorMini;
+        let notification_is_active = notificationModalMini.classList.contains('menu__first-block__notification__modal-mini-active');
+        if (!its_notificationModal && !its_notificationActivator && notification_is_active) {
+            toggleMenu();
+        }
+    })
+})
 
-document.getElementById("burgerActivator").onclick = function() {
-    document.querySelector(".menu__first-block__burger__button").classList.toggle("burger-active");
-    document.querySelector(".menu__first-block__burger__block").classList.toggle("menu-active");
-};
-
-document.getElementById("notification-activator").onmouseenter = function() {
-    document.querySelector(".menu__first-block__notification__modal").classList.toggle("menu__first-block__notification__modal-active");
-};
-document.getElementById("notification-activator").onmouseleave = function() {
-    document.querySelector(".menu__first-block__notification__modal").classList.remove("menu__first-block__notification__modal-active");
-};
 
 const lIcon = document.getElementsByClassName('main__page__picture__hidden-info__like-icon');
 const lIconA = document.getElementsByClassName('main__page__picture__hidden-info__like-icon-active');

@@ -161,24 +161,32 @@
         border: 1px solid rgba(92,92,92,.2);
         border-radius: 5px;
         top:40px;
-        right: -600px;
+        right: -131px;
         transition: 0.5s ease;
+        visibility: hidden;
+        opacity: 0;
         p{
           font-size: 1.6rem;
           white-space: nowrap
         }
       }
-      &__modal-mini{
-        right: -600px;
-      }
-      &__modal-mini-active{
-        right: 123px;
-      }
-      &__modal-active{
+      &__modal{
         right: -10px;
       }
-      &__modal-active-mini::before, &__modal-active-mini::after{
-        right: 123px !important;
+      &__modal-mini-active,&__modal-active{
+        opacity: 1;
+        visibility: visible;
+      }
+      &__modal-mini-active::before, &__modal-mini-active::after {
+        content: '';
+        position: absolute;
+        top:-20px;
+        right: 131px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #000;
+      }
+      &__modal-mini-active::after{
+        border-bottom: 10px solid white;
       }
       &__modal::before, &__modal::after {
         content: '';
@@ -837,49 +845,91 @@
       &__burger{
         display: block;
         margin: auto 20px;
-        position: relative;
-        .burger-active{
-          background-color: transparent;
-          transition: 0.5s ease;
-        }
-        .burger-active::before{
-          top: 0;
-          transform: rotate(45deg);
-        }
-        .burger-active::after{
-          top: 0;
-          transform: rotate(-45deg);
-        }
         &__button{
-          content: '';
           width: 20px;
-          height: 2px;
-          background: #000;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          transition: 0.5s ease;
+          height: 20px;
+          position: relative;
+          cursor: pointer;
+          &__cheeckbox {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+            z-index: 2;
+            -webkit-touch-callout: none;
+            position: absolute;
+            opacity: 0;
+          }
+          div {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 22px;
+            height: 12px;
+          }
+          span {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: var(--bar-bg, #000);
+            border-radius: 1px;
+            transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+
+            &:first-of-type {
+              top: 0;
+            }
+            &:last-of-type {
+              bottom: 0;
+            }
+          }
+          &.active,
+          &__cheeckbox:checked + div {
+            span {
+              &:first-of-type {
+                transform: rotate(45deg);
+                top: 5px;
+              }
+              &:last-of-type {
+                transform: rotate(-45deg);
+                bottom: 5px;
+              }
+            }
+          }
+
+          &.active:hover span:first-of-type,
+          &.active:hover span:last-of-type,
+          &:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
+          &:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
+            width: 22px;
+          }
+
+          &:hover {
+            // no need hover effect on mobile.
+            @media (min-width: 1024px) {
+              span:first-of-type {
+                width: 26px;
+              }
+
+              span:last-of-type {
+                width: 12px;
+              }
+            }
+          }
         }
-        &__button::before,&__button::after{
-          content: '';
-          width: 20px;
-          height: 2px;
-          background: #000;
-          position: absolute;
-          transition: 0.5s ease;
-        }
-        &__button::before{
-          top: -7px;
-        }
-        &__button::after{
-          top:7px;
+        .menu__first-block__burger__block-active{
+          right: 13px;
+          top:52px;
         }
         &__block{
           display: block;
           position: absolute;
           right: -200px;
-          top:20px;
+          top:52px;
           background: #fff;
           border: 1px solid rgba(92, 92, 92, 0.2);
           border-radius: 5px;
@@ -893,21 +943,23 @@
           &__icons{
             display: flex;
             justify-content: space-between;
+            pointer-events: none;
             &__notification,&__cart{
               display: block;
               margin:0;
+            }
+            &__notification{
+              pointer-events: auto;
             }
           }
           &__user-profile{
             display: flex;
             margin:25px 0 0 0;
+            pointer-events: none;
             a{
               white-space: nowrap;
             }
           }
-        }
-        .menu-active{
-          right: -16px;
         }
         &__block::before, &__block::after {
           content: '';
