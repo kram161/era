@@ -80,6 +80,13 @@ document.getElementById("burgerActivator").onclick = function() {
     document.querySelector(".menu__first-block__burger__block").classList.toggle("menu-active");
 };
 
+document.getElementById("notification-activator").onmouseenter = function() {
+    document.querySelector(".menu__first-block__notification__modal").classList.toggle("menu__first-block__notification__modal-active");
+};
+document.getElementById("notification-activator").onmouseleave = function() {
+    document.querySelector(".menu__first-block__notification__modal").classList.remove("menu__first-block__notification__modal-active");
+};
+
 const lIcon = document.getElementsByClassName('main__page__picture__hidden-info__like-icon');
 const lIconA = document.getElementsByClassName('main__page__picture__hidden-info__like-icon-active');
 const sIcon = document.getElementsByClassName('main__page__picture__hidden-info__save-icon');
@@ -176,4 +183,5 @@ for(let i = 0; i < mSaveIconA.length; i++){
         mSaveIconA[i].style.opacity = "0"
     })
 }
+
 

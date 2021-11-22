@@ -130,7 +130,70 @@
         }
       }
     }
-    &__notification,&__cart{
+    &__notification{
+      margin:auto 30px;
+      position: relative;
+      a{
+        position: relative;
+        display: flex;
+        .notification-alert{
+          span{
+            font-size: 1.2rem;
+            position: absolute;
+            top:-7px;
+            right: -7px;
+            color:#fff;
+            background: #ff0000;
+            padding: 1px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+          }
+        }
+      }
+      &__modal,&__modal-mini{
+        position: absolute;
+        background: #fff;
+        padding: 20px;
+        z-index: 12;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(92,92,92,.2);
+        border-radius: 5px;
+        top:40px;
+        right: -600px;
+        transition: 0.5s ease;
+        p{
+          font-size: 1.6rem;
+          white-space: nowrap
+        }
+      }
+      &__modal-mini{
+        right: -600px;
+      }
+      &__modal-mini-active{
+        right: 123px;
+      }
+      &__modal-active{
+        right: -10px;
+      }
+      &__modal-active-mini::before, &__modal-active-mini::after{
+        right: 123px !important;
+      }
+      &__modal::before, &__modal::after {
+        content: '';
+        position: absolute;
+        top:-20px;
+        right: 10px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #000;
+      }
+      &__modal::after {
+        border-bottom: 10px solid white;
+      }
+    }
+
+    &__cart{
       margin:auto 30px;
       a{
         display: block;
@@ -303,7 +366,7 @@
   }
 
 }
-.create-collection-modal,.add-photo-modal{
+.create-collection-modal,.add-photo-modal,.photo-modal-window{
   display: none;
 }
 .photo-modal{
@@ -858,6 +921,11 @@
           border-bottom: 10px solid white;
         }
 
+      }
+      &__notification{
+        &__modal{
+          display: none;
+        }
       }
     }
     &__second-block{

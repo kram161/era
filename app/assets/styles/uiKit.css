@@ -12761,10 +12761,78 @@ textarea.form-control-lg {
   color: #5C5C5C;
   padding: 7px 10px;
 }
-.menu__first-block__notification, .menu__first-block__cart {
+.menu__first-block__notification {
+  margin: auto 30px;
+  position: relative;
+}
+.menu__first-block__notification a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu__first-block__notification a .notification-alert span {
+  font-size: 1.2rem;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  color: #fff;
+  background: #ff0000;
+  padding: 1px 6px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+.menu__first-block__notification__modal, .menu__first-block__notification__modal-mini {
+  position: absolute;
+  background: #fff;
+  padding: 20px;
+  z-index: 12;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgba(92, 92, 92, 0.2);
+  border-radius: 5px;
+  top: 40px;
+  right: -600px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.menu__first-block__notification__modal p, .menu__first-block__notification__modal-mini p {
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+.menu__first-block__notification__modal-mini {
+  right: -600px;
+}
+.menu__first-block__notification__modal-mini-active {
+  right: 123px;
+}
+.menu__first-block__notification__modal-active {
+  right: -10px;
+}
+.menu__first-block__notification__modal-active-mini::before, .menu__first-block__notification__modal-active-mini::after {
+  right: 123px !important;
+}
+.menu__first-block__notification__modal::before, .menu__first-block__notification__modal::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #000;
+}
+.menu__first-block__notification__modal::after {
+  border-bottom: 10px solid white;
+}
+.menu__first-block__cart {
   margin: auto 30px;
 }
-.menu__first-block__notification a, .menu__first-block__cart a {
+.menu__first-block__cart a {
   display: block;
 }
 .menu__first-block__user-profile {
@@ -12966,7 +13034,7 @@ textarea.form-control-lg {
   transition: 0.5s ease;
 }
 
-.create-collection-modal, .add-photo-modal {
+.create-collection-modal, .add-photo-modal, .photo-modal-window {
   display: none;
 }
 
@@ -13618,6 +13686,9 @@ textarea.form-control-lg {
   }
   .menu__first-block__burger__block::after {
     border-bottom: 10px solid white;
+  }
+  .menu__first-block__notification__modal {
+    display: none;
   }
   .menu__second-block {
     overflow-x: scroll;
