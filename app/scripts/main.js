@@ -129,3 +129,51 @@ dropArea.ondrop = function (e) {
     this.className = '';
     e.preventDefault();
 }
+
+let dropAreaPhoto = document.getElementById('drop-area-photo');
+
+dropAreaPhoto.ondragover = function () { this.className = 'hover'; return false; };
+dropAreaPhoto.ondragend = function () { this.className = ''; return false; };
+dropAreaPhoto.ondrop = function (e) {
+    this.className = '';
+    e.preventDefault();
+}
+const mLikeIcon = document.getElementsByClassName('photo-modal__title__information__icons__like-icon');
+const mLikeIconA = document.getElementsByClassName('photo-modal__title__information__icons__like-icon-active');
+const mSaveIcon = document.getElementsByClassName('photo-modal__title__information__icons__save-icon');
+const mSaveIconA = document.getElementsByClassName('photo-modal__title__information__icons__save-icon-active');
+
+
+for(let i =0 ; i < mLikeIcon.length; i++){
+    mLikeIcon[i].addEventListener('click',()=>{
+        mLikeIcon[i].style.display = "none"
+        mLikeIcon[i].style.opacity = "0"
+        mLikeIconA[i].style.display = "block"
+        mLikeIconA[i].style.opacity = "1"
+    });
+}
+for(let i = 0; i < mLikeIconA.length; i++){
+    mLikeIconA[i].addEventListener('click',()=>{
+        mLikeIcon[i].style.display = "block"
+        mLikeIcon[i].style.opacity = "1"
+        mLikeIconA[i].style.display = "none"
+        mLikeIconA[i].style.opacity = "1"
+    });
+}
+for(let i = 0; i < mSaveIcon.length; i++){
+    mSaveIcon[i].addEventListener('click',()=>{
+        mSaveIcon[i].style.display = "none"
+        mSaveIcon[i].style.opacity = "0"
+        mSaveIconA[i].style.display = "block"
+        mSaveIconA[i].style.opacity = "1"
+    })
+}
+for(let i = 0; i < mSaveIconA.length; i++){
+    mSaveIconA[i].addEventListener('click',()=>{
+        mSaveIcon[i].style.display = "block"
+        mSaveIcon[i].style.opacity = "1"
+        mSaveIconA[i].style.display = "none"
+        mSaveIconA[i].style.opacity = "0"
+    })
+}
+

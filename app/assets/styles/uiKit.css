@@ -12966,8 +12966,12 @@ textarea.form-control-lg {
   transition: 0.5s ease;
 }
 
-.photo-modal {
+.create-collection-modal, .add-photo-modal {
   display: none;
+}
+
+.photo-modal {
+  display: block;
   position: absolute;
   z-index: 10;
   width: 98%;
@@ -12988,6 +12992,7 @@ textarea.form-control-lg {
           justify-content: space-between;
   padding: 0 25px;
   margin: 20px auto 0 auto;
+  background: #fff;
 }
 .photo-modal__header__user-profile {
   display: -webkit-box;
@@ -13066,6 +13071,7 @@ textarea.form-control-lg {
   margin: auto 0;
 }
 .photo-modal__slider {
+  background: #fff;
   padding: 0 45px;
   margin: 20px auto 0 auto;
   display: -webkit-box;
@@ -13082,14 +13088,14 @@ textarea.form-control-lg {
      object-fit: contain;
 }
 .photo-modal__title {
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 52px auto 0 auto;
-  padding: 0 25px;
+  padding: 52px 25px 0 25px;
 }
 .photo-modal__title h1, .photo-modal__title .h1 {
   font-size: 3.2rem;
@@ -13108,13 +13114,15 @@ textarea.form-control-lg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.photo-modal__title__information__icons a {
-  display: block;
   margin: auto 0;
 }
-.photo-modal__title__information__icons a svg {
-  margin: auto 30px auto 0;
+.photo-modal__title__information__icons__save-icon-active, .photo-modal__title__information__icons__like-icon-active {
+  display: none;
+  opacity: 0;
+}
+.photo-modal__title__information__icons svg {
+  cursor: pointer;
+  margin: 0 30px;
 }
 .photo-modal__title__information__button {
   display: -webkit-box;
@@ -13147,6 +13155,7 @@ textarea.form-control-lg {
   margin: 0;
 }
 .photo-modal__description {
+  background: #fff;
   padding: 0 80px;
   margin: 0 auto;
   display: -webkit-box;
@@ -13172,6 +13181,7 @@ textarea.form-control-lg {
 }
 .photo-modal__description__hashtags {
   margin: 55px 0 0 0;
+  background: #fff;
 }
 .photo-modal__description__hashtags h2, .photo-modal__description__hashtags .h2 {
   font-size: 2.4rem;
@@ -13205,8 +13215,8 @@ textarea.form-control-lg {
   transition: 0.5s ease;
 }
 .photo-modal__photo {
-  margin: 52px auto 0 auto;
-  padding: 0 25px;
+  background: #fff;
+  padding: 52px 25px 0 25px;
 }
 .photo-modal__photo h1, .photo-modal__photo .h1 {
   font-size: 3.2rem;
@@ -13366,7 +13376,7 @@ textarea.form-control-lg {
 }
 
 .add-photo {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 10;
   width: 98%;
@@ -13388,13 +13398,46 @@ textarea.form-control-lg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 80px 0 40px 0;
+  padding: 80px 120px 40px 120px;
 }
-.add-photo__slider img {
-  width: 1180px;
+.add-photo__slider__input-file {
+  width: 100%;
+  height: 100%;
+}
+.add-photo__slider__input-file input {
+  display: none;
+}
+.add-photo__slider__input-file label {
+  border: 1px solid #BDBDBD;
+  width: 100%;
   height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: inline-block;
+  position: relative;
+}
+.add-photo__slider__input-file label p {
+  position: absolute;
+  width: 143px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  top: calc(50% - 24px);
+  left: calc(50% - 72px);
+}
+.add-photo__slider__input-file .drop-text {
+  display: none;
+}
+.add-photo__slider__input-file #drop-area-photo.hover {
+  width: 100%;
+  height: 700px;
+  border: none;
+  background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: grey; stroke-width: 4; stroke-dasharray: 8 8'/></svg>");
+}
+.add-photo__slider__input-file #drop-area-photo.hover .simple-text {
+  display: none !important;
+}
+.add-photo__slider__input-file #drop-area-photo.hover .drop-text {
+  display: block !important;
 }
 .add-photo__description {
   display: -webkit-box;
@@ -13402,6 +13445,7 @@ textarea.form-control-lg {
   display: flex;
   padding: 0 172px 40px 172px;
   margin: 60px 0 0 0;
+  background: #fff;
 }
 .add-photo__description .personal-area__settings__menu {
   height: auto;
@@ -13430,6 +13474,10 @@ textarea.form-control-lg {
   color: #fff;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+.add-photo-modal {
+  display: none !important;
 }
 
 .picture__page {
@@ -13610,5 +13658,166 @@ textarea.form-control-lg {
   }
   .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__more-button, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__settings-button, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__like-icon-active, .picture__page .main__page__picture a:nth-child(1) .main__page__picture__hidden-info__save-icon-active {
     margin: 0 0 10px 0;
+  }
+
+  .add-photo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .add-photo__slider {
+    padding: 5px;
+  }
+  .add-photo__slider__input-file label {
+    height: 30vh;
+  }
+  .add-photo__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+    margin: 30px 0 0 0;
+  }
+
+  .create-collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .create-collection__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    background: #fff;
+  }
+  .create-collection__block__input-file {
+    margin: 20px auto;
+  }
+  .create-collection__block__inputs {
+    margin: 0;
+  }
+  .create-collection__block__inputs__buttons {
+    margin: 20px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .photo-modal {
+    padding: 0 10px;
+    width: 100%;
+    background: #fff;
+  }
+  .photo-modal__header {
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+  .photo-modal__header__information__stats {
+    margin: auto 0;
+  }
+  .photo-modal__slider {
+    padding: 0;
+    margin: 20px 0;
+  }
+  .photo-modal__slider img {
+    width: 100%;
+    height: 30vh;
+  }
+  .photo-modal__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .photo-modal__title__information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .photo-modal__title__information__icons {
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .photo-modal__title__information__icons a svg {
+    margin: 0;
+  }
+  .photo-modal__title__information__button {
+    margin: 0 auto;
+  }
+  .photo-modal__description {
+    padding: 0;
+  }
+  .photo-modal__description__hashtags {
+    margin: 20px 0 0 0;
+  }
+  .photo-modal__description__hashtags ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+  .photo-modal__description__hashtags ul li {
+    margin: 0 0 20px 0;
+  }
+  .photo-modal__description__hashtags ul li a {
+    margin: 0 10px 10px 0;
+  }
+  .photo-modal__description__text-block {
+    margin: 20px 0 0 0;
+  }
+  .photo-modal__photo {
+    margin: 0;
+    padding: 20px 0 0 0;
+  }
+  .photo-modal__photo__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .photo-modal__photo__block .main__page__picture {
+    max-width: 100%;
   }
 }
