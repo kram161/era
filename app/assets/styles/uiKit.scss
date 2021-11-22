@@ -377,6 +377,7 @@
 .create-collection-modal,.add-photo-modal,.photo-modal-window{
   display: none;
 }
+
 .photo-modal{
   display: block;
   position: absolute;
@@ -392,7 +393,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 25px;
-    margin:20px auto 0 auto;
+    margin:20px auto;
     background: #fff;
     &__user-profile{
       display: flex;
@@ -608,7 +609,7 @@
   &__block{
     display: flex;
     justify-content: flex-start;
-    margin: 21px 120px 0 120px;
+    margin: 20px 120px;
     &__input-file{
       margin: 18px 0 0 0;
       p{
@@ -802,9 +803,6 @@
       }
     }
   }
-}
-.add-photo-modal{
-  display: none!important;
 }
 .picture__page{
   column-count: 3;
@@ -1044,6 +1042,9 @@
     flex-direction: column;
     width: 100%;
     padding: 0 10px;
+    h2{
+      margin:20px;
+    }
     &__block{
       display: flex;
       flex-direction: column;
@@ -1059,6 +1060,10 @@
           justify-content: center;
         }
       }
+    }
+    &__button{
+      top:20px;
+      right: 20px;
     }
   }
   .photo-modal{

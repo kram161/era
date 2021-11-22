@@ -13067,7 +13067,7 @@ textarea.form-control-lg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 25px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto;
   background: #fff;
 }
 .photo-modal__header__user-profile {
@@ -13335,7 +13335,7 @@ textarea.form-control-lg {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 21px 120px 0 120px;
+  margin: 20px 120px;
 }
 .create-collection__block__input-file {
   margin: 18px 0 0 0;
@@ -13550,10 +13550,6 @@ textarea.form-control-lg {
   color: #fff;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-
-.add-photo-modal {
-  display: none !important;
 }
 
 .picture__page {
@@ -13822,6 +13818,9 @@ textarea.form-control-lg {
     width: 100%;
     padding: 0 10px;
   }
+  .create-collection h2, .create-collection .h2 {
+    margin: 20px;
+  }
   .create-collection__block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13844,6 +13843,10 @@ textarea.form-control-lg {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .create-collection__button {
+    top: 20px;
+    right: 20px;
   }
 }
 @media (max-width: 541px) {
