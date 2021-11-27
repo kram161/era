@@ -1,0 +1,80 @@
+.add-photo-modal
+    .add-photo
+        .add-photo__close-button
+            <?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+        .add-photo__slider
+            .add-photo__slider__input-file
+                input(
+                    id="addPhoto"
+                    type='file'
+                    name="newsName"
+                )
+                label(for="addPhoto")#drop-area-photo
+                    p(class='simple-text') Поместите изображение сюда
+                    p(class='drop-text') Отпустите чтобы загрузить
+        .add-photo__description
+            .personal-area__settings__area
+                .personal-area__settings__area__profile
+                    h2 Настройки фото
+                    .personal-area__settings__area__profile__personal-information
+                        .personal-area__settings__area__profile__personal-information__input-simple.simple-input
+                            p Название фото
+                            input(
+                                type='text'
+                                placeholder='Ведите название фото'
+                            )
+                        .personal-area__settings__area__profile__personal-information__interests
+                            p Теги для поиска
+                            input#interestsTaPhoto(
+                                type='text'
+                                placeholder='Начните вводить тег'
+                            )
+                        .personal-area__settings__area__profile__personal-information__text-area
+                            p Описание серии
+                            textarea#taAddPhotoPhoto(
+                                placeholder='Введите описание серии'
+                                maxlength='300'
+                            )
+                            div
+                                span#taNumberAddPhotoPhoto 0
+                                span /300
+
+                .personal-area__settings__area__account
+                    h2 Настройки серии работ
+                    .personal-area__settings__area__account__personal-information
+                        .personal-area__settings__area__account__personal-information__input-simple.simple-input
+                            .simple-input
+                                p Название серии
+                                input(
+                                    type='email'
+                                    placeholder='Ведите название серии'
+                                )
+                        .personal-area__settings__area__profile__personal-information__interests
+                            p Теги для поиска
+                            input#interestsTaPhotoEpisode(
+                                type='text'
+                                placeholder='Начните вводить тег'
+                            )
+                        .personal-area__settings__area__profile__personal-information__text-area
+                            p Описание серии
+                            textarea#taAddPhotoEpisode(
+                                placeholder='Введите описание серии'
+                                maxlength='300'
+                            )
+                            div
+                                span#taNumberAddPhotoEpisode 0
+                                span /300
+
+            .add-photo__button
+                .personal-area__settings__menu
+                    .personal-area__settings__menu__button
+                        a(href='#') Опубликовать
+                    ul
+                        li
+                            a(href='#') Настройки фото
+                        li
+                            a(href='#') Настройки серии работ
+                        li
+                            a(href='#') Настройки монетизации
+                .personal-area__settings__menu__button-cancel
+                    a(href='#') Отмена

@@ -144,6 +144,83 @@ window.addEventListener('load', function (){
         }
     })
 })
+window.addEventListener('load', function () {
+    const userProfileActivator = document.querySelector('.menu__first-block__user-activator')
+    const userProfileActivatorMini = document.querySelector('.menu__first-block__burger__block__user-profile-mini')
+    const userProfileList = document.querySelector('.menu__first-block__user-profile__list')
+    const toggleMenu = () => {
+        userProfileList.classList.toggle('menu__first-block__user-profile__list-active');
+    }
+    userProfileActivator.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+    userProfileActivatorMini.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+    document.addEventListener('click', e => {
+        let target = e.target;
+        let itsProfileList = target === userProfileList || userProfileActivator.contains(target);
+        let itsProfileActivator = target === userProfileActivator;
+        let userProfileListActive = userProfileList.classList.contains('menu__first-block__user-profile__list-active');
+        if (!itsProfileList && !itsProfileActivator && userProfileListActive) {
+            toggleMenu();
+        }
+    })
+})
+
+window.addEventListener('load',function (){
+    const collectionCrateButton = document.querySelector('.create-collection-button')
+    let collectionCheck = document.querySelector('.collection')
+    if (typeof(collectionCheck) != 'undefined' && collectionCheck != null)
+    {
+        collectionCrateButton.style.display = 'block';
+    }
+})
+window.addEventListener('load',function (){
+    const addPhotoButton = document.querySelector('.add-photo-button')
+    const addPhotoModal = document.querySelector('.add-photo-modal')
+    const addPhotoCloseButton = document.querySelector('.add-photo__close-button')
+    addPhotoButton.addEventListener('click', () => {
+        addPhotoModal.style.opacity = '1'
+        addPhotoModal.style.visibility = 'visible'
+    })
+    addPhotoCloseButton.addEventListener('click', () => {
+        addPhotoModal.style.opacity = '0'
+        addPhotoModal.style.visibility = 'hidden'
+    })
+})
+window.addEventListener('load',function (){
+    const picturePage = document.querySelectorAll('.main__page__picture')
+    const photoModal = document.querySelector('.photo-modal-window')
+    const photoModalCloser = document.querySelector('.photo-modal__header__information__close-button')
+    for(let i=0; i < picturePage.length;i++){
+        picturePage[i].addEventListener('click', () => {
+            photoModal.style.opacity = '1'
+            photoModal.style.visibility = 'visible'
+        })
+    }
+    photoModalCloser.addEventListener('click', () => {
+        photoModal.style.opacity = '0'
+        photoModal.style.visibility = 'hidden'
+    })
+
+})
+window.addEventListener('load',function (){
+    const createCollectionButton = document.querySelector('.create-collection-button')
+    const createCollectionModal = document.querySelector('.create-collection-modal')
+    const createCollectionCloseButton = document.querySelector('.create-collection__close-button')
+    createCollectionButton.addEventListener('click', () => {
+        createCollectionModal.style.opacity = '1'
+        createCollectionModal.style.visibility = 'visible'
+    })
+    createCollectionCloseButton.addEventListener('click', () => {
+        createCollectionModal.style.opacity = '0'
+        createCollectionModal.style.visibility = 'hidden'
+    })
+})
+
 
 
 const lIcon = document.getElementsByClassName('main__page__picture__hidden-info__like-icon');
@@ -242,5 +319,3 @@ for(let i = 0; i < mSaveIconA.length; i++){
         mSaveIconA[i].style.opacity = "0"
     })
 }
-
-

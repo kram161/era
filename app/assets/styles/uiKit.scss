@@ -210,9 +210,9 @@
     &__user-profile{
       margin:auto 30px;
       display: flex;
+      position: relative;
       a:nth-child(1){
         display: block;
-        width: 40px;
         height: 40px;
         border-radius: 100px;
         margin:auto 15px auto 0;
@@ -231,6 +231,56 @@
           font-size:1.8rem;
           font-weight: 400;
         }
+      }
+      &__list{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top:50px;
+        right: 0;
+        background: #fff;
+        transition: 0.5s ease;
+        padding: 10px 20px;
+        border: 1px solid #ececec;
+        display: block;
+        ul{
+          pointer-events: none;
+          padding: 0;
+          margin:0;
+          li{
+            a{
+              pointer-events: visible;
+              text-decoration: none;
+              white-space: nowrap;
+              color:#000;
+              font-size: 1.8rem;
+              padding: 0;
+              height: auto !important;
+              margin:5px 0!important;
+              position: relative;
+              display: inline-block !important;
+              cursor:pointer;
+            }
+            a:after{
+              position: absolute;
+              content: '';
+              height: 1px;
+              width: 0;
+              transition: 0.5s ease;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: #000;
+            }
+            a:hover:after{
+              width: 100%;
+            }
+          }
+        }
+      }
+      &__list-active{
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -286,6 +336,9 @@
     a{
       display: block;
       margin:0 auto 20px auto;
+    }
+    .create-collection-button{
+      display: none;
     }
   }
 }
@@ -374,8 +427,10 @@
   }
 
 }
-.create-collection-modal,.add-photo-modal,.photo-modal-window{
-  display: none;
+.add-photo-modal,.photo-modal-window,.create-collection-modal{
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
 }
 
 .photo-modal{
@@ -457,6 +512,13 @@
       a{
         display: block;
         margin:auto 0;
+      }
+      &__close-button{
+        margin: auto 0;
+        svg{
+          cursor: pointer;
+          width: 32px;
+        }
       }
     }
   }
@@ -601,6 +663,15 @@
   transform: translate(-50%, -50%);
   z-index: 10;
   background: #fff;
+  &__close-button{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    svg{
+      cursor: pointer;
+      width: 32px;
+    }
+  }
   h2{
     margin:52px 0 0 0;
     font-weight: 700;
@@ -803,6 +874,15 @@
       }
     }
   }
+  &__close-button{
+    position: absolute;
+    right: 20px;
+    top:20px;
+    svg{
+      cursor: pointer;
+      width: 32px;
+    }
+  }
 }
 .picture__page{
   column-count: 3;
@@ -958,6 +1038,9 @@
               white-space: nowrap;
             }
           }
+          &__user-profile-mini{
+            pointer-events: visible;
+          }
         }
         &__block::before, &__block::after {
           content: '';
@@ -975,6 +1058,11 @@
       &__notification{
         &__modal{
           display: none;
+        }
+      }
+      &__user-profile{
+        &__list{
+          right: -20px;
         }
       }
     }
@@ -1022,6 +1110,15 @@
   .add-photo{
     display: flex;
     flex-direction: column;
+    &__close-button{
+      position: absolute;
+      right: 0;
+      top:-10px;
+      svg{
+        cursor: pointer;
+        width: 20px;
+      }
+    }
     &__slider{
       padding: 5px;
       &__input-file{
@@ -1042,6 +1139,9 @@
     flex-direction: column;
     width: 100%;
     padding: 0 10px;
+    &__close-button{
+      top:-5px;
+    }
     h2{
       margin:20px;
     }
