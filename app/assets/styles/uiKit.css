@@ -13102,9 +13102,22 @@ textarea.form-control-lg {
   transition: 0.2s ease;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+  width: 15px;
+  border-radius: 2px;
+}
+
 .photo-modal {
   display: block;
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 10;
   width: 98%;
   height: 100%;
@@ -13374,7 +13387,9 @@ textarea.form-control-lg {
 
 .create-collection {
   display: block;
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 98%;
   height: 540px;
   padding: 0 72px;
@@ -13525,7 +13540,9 @@ textarea.form-control-lg {
 
 .add-photo {
   display: block;
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 10;
   width: 98%;
   height: 100%;
