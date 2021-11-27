@@ -13089,6 +13089,7 @@ textarea.form-control-lg {
   margin: 0;
 }
 .main__page__picture a:nth-child(2) svg {
+  margin: auto 0;
   opacity: 0;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
