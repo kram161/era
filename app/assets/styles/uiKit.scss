@@ -431,9 +431,12 @@
   visibility: hidden;
   opacity: 0;
   transition: 0.2s ease;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar {
   width: 15px;
+  height: 3px;
   background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
@@ -443,6 +446,8 @@
 }
 
 .photo-modal{
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
   position:fixed;
   overflow-y:scroll;
@@ -663,6 +668,8 @@
   }
 }
 .create-collection{
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
   position:fixed;
   overflow-y:scroll;
@@ -799,6 +806,8 @@
   }
 }
 .add-photo{
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
   position:fixed;
   overflow-y:scroll;

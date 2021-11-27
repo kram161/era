@@ -13100,10 +13100,13 @@ textarea.form-control-lg {
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar {
   width: 15px;
+  height: 3px;
   background-color: #fff;
 }
 
@@ -13114,6 +13117,8 @@ textarea.form-control-lg {
 }
 
 .photo-modal {
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
   position: fixed;
   overflow-y: scroll;
@@ -13386,6 +13391,8 @@ textarea.form-control-lg {
 }
 
 .create-collection {
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
   position: fixed;
   overflow-y: scroll;
@@ -13539,6 +13546,8 @@ textarea.form-control-lg {
 }
 
 .add-photo {
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
   display: block;
   position: fixed;
   overflow-y: scroll;
