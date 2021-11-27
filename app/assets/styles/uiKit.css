@@ -13947,7 +13947,8 @@ textarea.form-control-lg {
     padding: 0 10px;
   }
   .create-collection__close-button {
-    top: -5px;
+    top: 2px;
+    right: 2px;
   }
   .create-collection h2, .create-collection .h2 {
     margin: 20px;
@@ -13976,7 +13977,7 @@ textarea.form-control-lg {
             justify-content: center;
   }
   .create-collection__button {
-    top: 20px;
+    top: 50px;
     right: 20px;
   }
 }

@@ -1168,7 +1168,8 @@
     width: 100%;
     padding: 0 10px;
     &__close-button{
-      top:-5px;
+      top:2px;
+      right: 2px;
     }
     h2{
       margin:20px;
@@ -1190,7 +1191,7 @@
       }
     }
     &__button{
-      top:20px;
+      top:50px;
       right: 20px;
     }
   }

@@ -185,25 +185,27 @@ window.addEventListener('load', function () {
     })
 })
 window.addEventListener('load',function (){
-    const collectionCrateButton = document.querySelector('.create-collection-button')
+    const collectionCreateButton = document.querySelector('.create-collection-button')
     let collectionCheck = document.querySelector('.collection')
     if (typeof(collectionCheck) != 'undefined' && collectionCheck != null)
     {
-        collectionCrateButton.style.display = 'block';
+        collectionCreateButton.style.display = 'block';
     }
 })
 window.addEventListener('load',function (){
     const addPhotoButton = document.querySelector('.add-photo-button')
     const addPhotoModal = document.querySelector('.add-photo-modal')
-    const addPhotoCloseButton = document.querySelector('.add-photo__close-button')
+    const addPhotoCloseButton = document.querySelectorAll('.add-photo__close-button-activator')
     addPhotoButton.addEventListener('click', () => {
         addPhotoModal.style.opacity = '1'
         addPhotoModal.style.visibility = 'visible'
     })
-    addPhotoCloseButton.addEventListener('click', () => {
-        addPhotoModal.style.opacity = '0'
-        addPhotoModal.style.visibility = 'hidden'
-    })
+    for(let i = 0; i < addPhotoCloseButton.length; i++){
+        addPhotoCloseButton[i].addEventListener('click', () => {
+            addPhotoModal.style.opacity = '0'
+            addPhotoModal.style.visibility = 'hidden'
+        })
+    }
 })
 window.addEventListener('load',function (){
     const picturePage = document.querySelectorAll('.main__page__picture')
@@ -224,15 +226,17 @@ window.addEventListener('load',function (){
 window.addEventListener('load',function (){
     const createCollectionButton = document.querySelector('.create-collection-button')
     const createCollectionModal = document.querySelector('.create-collection-modal')
-    const createCollectionCloseButton = document.querySelector('.create-collection__close-button')
+    const createCollectionCloseButton = document.querySelectorAll('.create-collection__close-button-activator')
     createCollectionButton.addEventListener('click', () => {
         createCollectionModal.style.opacity = '1'
         createCollectionModal.style.visibility = 'visible'
     })
-    createCollectionCloseButton.addEventListener('click', () => {
-        createCollectionModal.style.opacity = '0'
-        createCollectionModal.style.visibility = 'hidden'
-    })
+    for(let i = 0; i < createCollectionCloseButton.length; i++){
+        createCollectionCloseButton[i].addEventListener('click', () => {
+            createCollectionModal.style.opacity = '0'
+            createCollectionModal.style.visibility = 'hidden'
+        })
+    }
 })
 
 
