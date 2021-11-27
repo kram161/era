@@ -12587,6 +12587,17 @@ textarea.form-control-lg {
   font-size: 10px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 3px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+  border-radius: 2px;
+}
+
 .container {
   max-width: 1440px;
   padding: 0 25px;
@@ -12872,7 +12883,7 @@ textarea.form-control-lg {
   font-size: 1.8rem;
   font-weight: 400;
 }
-.menu__first-block__user-profile__list {
+.menu__first-block__user-profile__list, .menu__first-block__user-profile__list-mini {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -12885,12 +12896,12 @@ textarea.form-control-lg {
   border: 1px solid #ececec;
   display: block;
 }
-.menu__first-block__user-profile__list ul {
+.menu__first-block__user-profile__list ul, .menu__first-block__user-profile__list-mini ul {
   pointer-events: none;
   padding: 0;
   margin: 0;
 }
-.menu__first-block__user-profile__list ul li a {
+.menu__first-block__user-profile__list ul li a, .menu__first-block__user-profile__list-mini ul li a {
   pointer-events: visible;
   text-decoration: none;
   white-space: nowrap;
@@ -12903,7 +12914,7 @@ textarea.form-control-lg {
   display: inline-block !important;
   cursor: pointer;
 }
-.menu__first-block__user-profile__list ul li a:after {
+.menu__first-block__user-profile__list ul li a:after, .menu__first-block__user-profile__list-mini ul li a:after {
   position: absolute;
   content: "";
   height: 1px;
@@ -12915,12 +12926,17 @@ textarea.form-control-lg {
   right: 0;
   background: #000;
 }
-.menu__first-block__user-profile__list ul li a:hover:after {
+.menu__first-block__user-profile__list ul li a:hover:after, .menu__first-block__user-profile__list-mini ul li a:hover:after {
   width: 100%;
 }
 .menu__first-block__user-profile__list-active {
   opacity: 1;
   visibility: visible;
+}
+.menu__first-block__user-profile__list-mini-active {
+  opacity: 1;
+  visibility: visible;
+  right: -22px;
 }
 .menu__second-block ul {
   margin: 22px 0 0 0;
@@ -13102,18 +13118,6 @@ textarea.form-control-lg {
   transition: 0.2s ease;
   border: 1px solid #d3d3d3;
   border-radius: 4px;
-}
-
-::-webkit-scrollbar {
-  width: 15px;
-  height: 3px;
-  background-color: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #d3d3d3;
-  width: 15px;
-  border-radius: 2px;
 }
 
 .photo-modal {
@@ -13906,14 +13910,14 @@ textarea.form-control-lg {
   .add-photo__close-button {
     position: absolute;
     right: 0;
-    top: -10px;
+    top: 0;
   }
   .add-photo__close-button svg {
     cursor: pointer;
     width: 20px;
   }
   .add-photo__slider {
-    padding: 5px;
+    padding: 20px;
   }
   .add-photo__slider__input-file label {
     height: 30vh;
@@ -13985,6 +13989,20 @@ textarea.form-control-lg {
   .photo-modal__header {
     margin: 20px 0 0 0;
     padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .photo-modal__header__user-profile {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .photo-modal__header__information {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .photo-modal__header__information__stats {
     margin: auto 0;

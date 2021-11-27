@@ -146,16 +146,11 @@ window.addEventListener('load', function (){
 })
 window.addEventListener('load', function () {
     const userProfileActivator = document.querySelector('.menu__first-block__user-activator')
-    const userProfileActivatorMini = document.querySelector('.menu__first-block__burger__block__user-profile-mini')
     const userProfileList = document.querySelector('.menu__first-block__user-profile__list')
     const toggleMenu = () => {
         userProfileList.classList.toggle('menu__first-block__user-profile__list-active');
     }
     userProfileActivator.addEventListener('click', e => {
-        e.stopPropagation();
-        toggleMenu();
-    });
-    userProfileActivatorMini.addEventListener('click', e => {
         e.stopPropagation();
         toggleMenu();
     });
@@ -169,7 +164,26 @@ window.addEventListener('load', function () {
         }
     })
 })
-
+window.addEventListener('load', function () {
+    const userProfileActivatorMini = document.querySelector('.menu__first-block__burger__block__user-profile-mini')
+    const userProfileListMini = document.querySelector('.menu__first-block__user-profile__list-mini')
+    const toggleMenu = () => {
+        userProfileListMini.classList.toggle('menu__first-block__user-profile__list-mini-active');
+    }
+    userProfileActivatorMini.addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+    document.addEventListener('click', e => {
+        let target = e.target;
+        let itsProfileList = target === userProfileListMini || userProfileActivatorMini.contains(target);
+        let itsProfileActivatorMini = target === userProfileActivatorMini;
+        let userProfileListActive = userProfileListMini.classList.contains('menu__first-block__user-profile__list-active');
+        if (!itsProfileList && !itsProfileActivatorMini && userProfileListActive) {
+            toggleMenu();
+        }
+    })
+})
 window.addEventListener('load',function (){
     const collectionCrateButton = document.querySelector('.create-collection-button')
     let collectionCheck = document.querySelector('.collection')
