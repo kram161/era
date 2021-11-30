@@ -442,14 +442,17 @@
   }
 
 }
-.add-photo-modal,.photo-modal-window,.create-collection-modal{
+.add-photo-modal,.create-collection-modal{
   visibility: hidden;
   opacity: 0;
   transition: 0.2s ease;
   border: 1px solid #d3d3d3;
   border-radius: 4px;
 }
-
+.photo-modal-window{
+  visibility: visible;
+  opacity: 1;
+}
 .photo-modal{
   border: 1px solid #d3d3d3;
   border-radius: 4px;
@@ -549,11 +552,27 @@
     margin:20px auto 0 auto;
     display: flex;
     justify-content: center;
-    img{
-      max-width: 1180px;
-      max-height: 692px;
-      object-fit: contain;
+    &__slide{
+      &__prev-button,&__next-button{
+        position: absolute;
+        width: 30px;
+        top:45%;
+        transform: translate(-45%);
+        cursor: pointer;
+      }
+      &__prev-button{
+        left: 30px;
+      }
+      &__next-button{
+        right: 0;
+      }
+      img{
+        max-width: 1180px;
+        max-height: 692px;
+        object-fit: contain;
+      }
     }
+
   }
   &__title{
     background: #fff;
@@ -831,9 +850,25 @@
     display: flex;
     justify-content: center;
     padding: 80px 120px 40px 120px;
+    position: relative;
+    flex-wrap: nowrap;
+    &__prev-button,&__next-button{
+      position: absolute;
+      width: 30px;
+      top:50%;
+      transform: translate(-50%);
+      cursor: pointer;
+    }
+    &__prev-button{
+      left: 30px;
+    }
+    &__next-button{
+      right: 0;
+    }
     &__input-file{
       width: 100%;
       height: 100%;
+      flex-grow: 1;
       input{
         display: none;
       }
@@ -857,7 +892,7 @@
       .drop-text{
         display: none;
       }
-      #drop-area-photo.hover{
+      .drop-area-photo-active{
         width: 100%;
         height: 700px;
         border:none;
@@ -907,6 +942,7 @@
     position: absolute;
     right: 20px;
     top:20px;
+    z-index: 15;
     svg{
       cursor: pointer;
       width: 32px;
@@ -1150,6 +1186,17 @@
     }
     &__slider{
       padding: 20px;
+
+      &__prev-button,&__next-button{
+        top:45%;
+        transform: translate(-45%);
+      }
+      &__prev-button{
+        left: 30px;
+      }
+      &__next-button{
+        right: 0;
+      }
       &__input-file{
         label{
           height: 30vh;
@@ -1204,6 +1251,17 @@
       margin: 20px 0 0 0;
       padding: 0;
       flex-direction: column;
+      &__slider{
+        &__slide{
+          &__prev-button,&__next-button{
+            position: absolute;
+            width: 30px;
+            top:45%;
+            transform: translate(-45%);
+            cursor: pointer;
+          }
+        }
+      }
       &__user-profile{
         justify-content: center;
       }

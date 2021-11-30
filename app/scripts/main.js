@@ -282,23 +282,39 @@ for(let i = 0; i < sIconA.length; i++){
 
 
 
-let dropArea = document.getElementById('drop-area');
+try{
+    let dropArea = document.getElementById('drop-area');
 
-dropArea.ondragover = function () { this.className = 'hover'; return false; };
-dropArea.ondragend = function () { this.className = ''; return false; };
-dropArea.ondrop = function (e) {
-    this.className = '';
-    e.preventDefault();
+    dropArea.ondragover = function () { this.className = 'hover'; return false; };
+    dropArea.ondragend = function () { this.className = ''; return false; };
+    dropArea.ondrop = function (e) {
+        this.className = '';
+        e.preventDefault();
+    }
 }
 
-let dropAreaPhoto = document.getElementById('drop-area-photo');
+catch {
 
-dropAreaPhoto.ondragover = function () { this.className = 'hover'; return false; };
-dropAreaPhoto.ondragend = function () { this.className = ''; return false; };
-dropAreaPhoto.ondrop = function (e) {
-    this.className = '';
-    e.preventDefault();
 }
+let dropAreaPhoto = document.querySelectorAll('.drop-area-photo');
+console.log(dropAreaPhoto)
+
+for(let i = 0; i < dropAreaPhoto.length; i++){
+    dropAreaPhoto[i].ondragover = function () {
+        this.className = 'drop-area-photo-active'; return false;
+    };
+}
+for(let i = 0; i < dropAreaPhoto.length; i++){
+    dropAreaPhoto[i].ondragend = function () { this.className = ''; return false; };
+}
+
+for(let i = 0; i < dropAreaPhoto.length; i++){
+    dropAreaPhoto[i].ondrop = function (e) {
+        this.className = '';
+        e.preventDefault();
+    }
+}
+
 const mLikeIcon = document.getElementsByClassName('photo-modal__title__information__icons__like-icon');
 const mLikeIconA = document.getElementsByClassName('photo-modal__title__information__icons__like-icon-active');
 const mSaveIcon = document.getElementsByClassName('photo-modal__title__information__icons__save-icon');

@@ -13112,13 +13112,18 @@ textarea.form-control-lg {
   transition: 0.5s ease;
 }
 
-.add-photo-modal, .photo-modal-window, .create-collection-modal {
+.add-photo-modal, .create-collection-modal {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   border: 1px solid #d3d3d3;
   border-radius: 4px;
+}
+
+.photo-modal-window {
+  visibility: visible;
+  opacity: 1;
 }
 
 .photo-modal {
@@ -13243,7 +13248,21 @@ textarea.form-control-lg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.photo-modal__slider img {
+.photo-modal__slider__slide__prev-button, .photo-modal__slider__slide__next-button {
+  position: absolute;
+  width: 30px;
+  top: 45%;
+  -webkit-transform: translate(-45%);
+          transform: translate(-45%);
+  cursor: pointer;
+}
+.photo-modal__slider__slide__prev-button {
+  left: 30px;
+}
+.photo-modal__slider__slide__next-button {
+  right: 0;
+}
+.photo-modal__slider__slide img {
   max-width: 1180px;
   max-height: 692px;
   -o-object-fit: contain;
@@ -13578,10 +13597,30 @@ textarea.form-control-lg {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 80px 120px 40px 120px;
+  position: relative;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.add-photo__slider__prev-button, .add-photo__slider__next-button {
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  cursor: pointer;
+}
+.add-photo__slider__prev-button {
+  left: 30px;
+}
+.add-photo__slider__next-button {
+  right: 0;
 }
 .add-photo__slider__input-file {
   width: 100%;
   height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .add-photo__slider__input-file input {
   display: none;
@@ -13606,16 +13645,16 @@ textarea.form-control-lg {
 .add-photo__slider__input-file .drop-text {
   display: none;
 }
-.add-photo__slider__input-file #drop-area-photo.hover {
+.add-photo__slider__input-file .drop-area-photo-active {
   width: 100%;
   height: 700px;
   border: none;
   background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill: none; stroke: grey; stroke-width: 4; stroke-dasharray: 8 8'/></svg>");
 }
-.add-photo__slider__input-file #drop-area-photo.hover .simple-text {
+.add-photo__slider__input-file .drop-area-photo-active .simple-text {
   display: none !important;
 }
-.add-photo__slider__input-file #drop-area-photo.hover .drop-text {
+.add-photo__slider__input-file .drop-area-photo-active .drop-text {
   display: block !important;
 }
 .add-photo__description {
@@ -13658,6 +13697,7 @@ textarea.form-control-lg {
   position: absolute;
   right: 20px;
   top: 20px;
+  z-index: 15;
 }
 .add-photo__close-button svg {
   cursor: pointer;
@@ -13920,6 +13960,17 @@ textarea.form-control-lg {
   .add-photo__slider {
     padding: 20px;
   }
+  .add-photo__slider__prev-button, .add-photo__slider__next-button {
+    top: 45%;
+    -webkit-transform: translate(-45%);
+            transform: translate(-45%);
+  }
+  .add-photo__slider__prev-button {
+    left: 30px;
+  }
+  .add-photo__slider__next-button {
+    right: 0;
+  }
   .add-photo__slider__input-file label {
     height: 30vh;
   }
@@ -13995,6 +14046,14 @@ textarea.form-control-lg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .photo-modal__header__slider__slide__prev-button, .photo-modal__header__slider__slide__next-button {
+    position: absolute;
+    width: 30px;
+    top: 45%;
+    -webkit-transform: translate(-45%);
+            transform: translate(-45%);
+    cursor: pointer;
   }
   .photo-modal__header__user-profile {
     -webkit-box-pack: center;
