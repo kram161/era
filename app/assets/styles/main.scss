@@ -732,7 +732,8 @@
           }
         }
         &__icons{
-          margin:auto 0 auto auto;
+          position: absolute;
+          right: 5px;
           a{
             display: block;
             margin:8px 0;

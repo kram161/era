@@ -1050,6 +1050,10 @@
       &__search-box{
         margin:auto;
         &__short{
+          position: fixed;
+          left: 0;
+          overflow: auto;
+          height: 80vh;
           &__unit{
             margin:0 0 18px 0;
             &__tags{
