@@ -13481,7 +13481,6 @@ textarea.form-control-lg {
 }
 
 .add-personal-photo-modal {
-  display: none;
   position: fixed;
   left: 50%;
   -webkit-transform: translateX(-50%);
