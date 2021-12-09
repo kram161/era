@@ -12938,6 +12938,30 @@ textarea.form-control-lg {
   visibility: visible;
   right: -22px;
 }
+.menu__first-block__user-profile__auth-button {
+  color: #000;
+  position: relative;
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin: auto 0;
+}
+.menu__first-block__user-profile__auth-button:before {
+  width: 0;
+  background: #000;
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.menu__first-block__user-profile__auth-button:hover {
+  color: #000;
+  text-decoration: none;
+}
+.menu__first-block__user-profile__auth-button:hover:before {
+  width: 100%;
+}
 .menu__second-block ul {
   margin: 22px 0 0 0;
   padding: 0;
@@ -13112,18 +13136,13 @@ textarea.form-control-lg {
   transition: 0.5s ease;
 }
 
-.add-photo-modal, .create-collection-modal {
-  visibility: hidden;
-  opacity: 0;
+.add-photo-modal, .create-collection-modal, .photo-modal-window {
+  visibility: visible;
+  opacity: 1;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   border: 1px solid #d3d3d3;
   border-radius: 4px;
-}
-
-.photo-modal-window {
-  visibility: visible;
-  opacity: 1;
 }
 
 .photo-modal {
@@ -13781,6 +13800,7 @@ textarea.form-control-lg {
 }
 .unregistred-modal .unregistred__block .reg__block__form {
   display: block;
+  position: relative;
 }
 
 @media (max-width: 541px) {
@@ -13796,6 +13816,12 @@ textarea.form-control-lg {
   }
   .menu__first-block__search-box {
     margin: auto;
+  }
+  .menu__first-block__search-box__short {
+    position: fixed;
+    left: 0;
+    overflow: auto;
+    height: 80vh;
   }
   .menu__first-block__search-box__short__unit {
     margin: 0 0 18px 0;
