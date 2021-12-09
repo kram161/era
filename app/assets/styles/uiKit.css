@@ -14136,7 +14136,7 @@ textarea.form-control-lg {
   .photo-modal__header__slider__slide__prev-button, .photo-modal__header__slider__slide__next-button {
     position: absolute;
     width: 30px;
-    top: 45%;
+    top: 25%;
     -webkit-transform: translate(-45%);
             transform: translate(-45%);
     cursor: pointer;
