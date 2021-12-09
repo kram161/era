@@ -13075,6 +13075,23 @@ textarea.form-control-lg {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
+.personal-area__settings .auth {
+  width: auto;
+  background: #fff;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 3;
+}
+.personal-area__settings .auth__block {
+  border: 1px solid #000;
+  background: #fff;
+  top: 35%;
+}
+.personal-area__settings .auth__block__form {
+  display: block;
+}
 
 .cart {
   padding: 140px 0 0 0;
@@ -13464,6 +13481,7 @@ textarea.form-control-lg {
 }
 
 .add-personal-photo-modal {
+  display: none;
   position: fixed;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -13701,6 +13719,22 @@ textarea.form-control-lg {
   .auth__block__form__sn__icons a, .reg__block__form__sn__icons a {
     padding: 12px 20px;
     width: 100%;
+  }
+
+  .personal-area__settings .auth {
+    width: 90%;
+    z-index: 11;
+    top: 50%;
+    height: auto;
+  }
+  .personal-area__settings .auth__block {
+    width: 100%;
+    border: 1px solid #000;
+    background: #fff;
+    top: 50%;
+  }
+  .personal-area__settings .auth__block__form {
+    display: block;
   }
 }
 @media (max-width: 374px) {

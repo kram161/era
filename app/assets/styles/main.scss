@@ -385,6 +385,22 @@
       }
     }
   }
+  .auth{
+    width: auto;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    &__block{
+      border: 1px solid #000;
+      background: #fff;
+      top:35%;
+      &__form{
+        display: block;
+      }
+    }
+  }
 }
 .cart{
   padding: 140px 0 0 0;
@@ -689,6 +705,7 @@
   }
 }
 .add-personal-photo-modal{
+  display: none;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -939,6 +956,23 @@
               width: 100%;
             }
           }
+        }
+      }
+    }
+  }
+  .personal-area__settings{
+    .auth{
+      width: 90%;
+      z-index: 11;
+      top:50%;
+      height: auto;
+      &__block{
+        width: 100%;
+        border: 1px solid #000;
+        background: #fff;
+        top:50%;
+        &__form{
+          display: block;
         }
       }
     }
