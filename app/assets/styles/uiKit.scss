@@ -478,8 +478,8 @@
 
 }
 .add-photo-modal,.create-collection-modal,.photo-modal-window{
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: 0.2s ease;
   border: 1px solid #d3d3d3;
   border-radius: 4px;
