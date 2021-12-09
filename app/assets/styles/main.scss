@@ -688,7 +688,24 @@
     }
   }
 }
-
+.add-personal-photo-modal{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  z-index: 2;
+  svg{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
 
 .auth{
   &__block{
@@ -709,6 +726,9 @@
   }
 }
 @media (max-width:541px){
+  .add-personal-photo-modal{
+    top:130px;
+  }
   .personal-area{
     &__profile{
       &__description{
